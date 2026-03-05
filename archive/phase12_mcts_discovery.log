@@ -1,0 +1,434 @@
+
+============================================================
+  CoAI OPERANDICS DISCOVERY ENGINE v2.0
+  Enhanced: Congruence | Deduplication | Diverse Conjectures
+============================================================
+============================================================
+  PROVER SELF-TEST
+============================================================
+
+  Test 1: Risk(Seq(X, ID_M)) = Risk(X)
+  Result: PROVED in 0 steps
+  Reason: EGRAPH_NORMALIZATION
+
+  Test 2 (should fail): Seq commutativity
+  Result: FAILED in 3003 steps
+  Reason: NO_PROOF_FOUND
+
+  Prover self-test: PASSED
+
+============================================================
+  TARGETED THEOREM VERIFICATION
+============================================================
+
+  Target: Risk Identity Simplification
+  Formula: Forall M1.Risk(Seq(M1, ID_M)) = Risk(M1)
+  Result: [OK] PROVED in 0 steps
+
+  Target: Parallel Self-Composition Idempotency
+  Formula: Forall M1.Risk(Par_Dyn(M1, M1)) = Risk(M1)
+  Result: [OK] PROVED in 0 steps
+
+  Target: Parallel Commutativity
+  Formula: Forall M1.Forall M2.Par_Dyn(M1, M2) = Par_Dyn(M2, M1)
+  Result: [FAIL] FAILED (NO_PROOF_FOUND) in 3003 steps
+
+  Target: Seq Associativity
+  Formula: Forall M1.Forall M2.Forall M3.Seq(Seq(M1, M2), M3) = Seq(M1, Seq(M2, M3))
+  Result: [FAIL] FAILED (NO_PROOF_FOUND) in 3003 steps
+
+  Target: Risk(ID_M) = 0
+  Formula: Risk(ID_M) = R_ZERO
+  Result: [OK] PROVED in 0 steps
+
+  Target: Trivial Barrier has no penalty
+  Formula: Forall M1.Risk(Barrier(M1, P_TRUE)) = Risk(M1)
+  Result: [OK] PROVED in 0 steps
+
+  Target: Security Bottleneck
+  Formula: Forall M1.Forall M2.Ent(Seq(M1, M2)) = min(Ent(M1), Ent(M2))
+  Result: [FAIL] FAILED (NO_PROOF_FOUND) in 3003 steps
+
+  Target: Cost(Seq(M, ID)) = Cost(M)
+  Formula: Forall M1.ResourceCost(Seq(M1, ID_M)) = ResourceCost(M1)
+  Result: [OK] PROVED in 0 steps
+
+  Target: Ent(Seq(M, ID)) = Ent(M)
+  Formula: Forall M1.Ent(Seq(M1, ID_M)) = Ent(M1)
+  Result: [OK] PROVED in 0 steps
+
+  Target: Par cost <= Seq cost
+  Formula: Forall M1.Forall M2.ResourceCost(Par_Dyn(M1, M2)) <= ResourceCost(Seq(M1, M2))
+  Result: [FAIL] FAILED (NO_PROOF_FOUND) in 3003 steps
+
+============================================================
+  CoAI OPERANDICS DISCOVERY ENGINE
+============================================================
+
+  Initialized with 66 axioms
+  Starting cumulative discovery loop (5 cycles)...
+
+============================================================
+  DISCOVERY CYCLE 0
+  Axioms: 66  Lemmas: 0  Counter-axioms: 0
+============================================================
+
+  Phase 1: Saturating knowledge base...
+    [SATURATE] Admitted 50 clauses... (Heap: 481)
+    [SATURATE] Admitted 100 clauses... (Heap: 898)
+  Found 107 interesting consequences
+    [1.00] Comp(Seq(Risk(M1), Ent(Comp(Seq(M1, M1))))) = Comp(Seq(M1, ResourceCost(M1)))
+    [1.00] Comp(Seq(M2, Ent(Risk(M1)))) = Comp(Seq(M1, ResourceCost(M1)))
+    [1.00] Comp(Seq(Risk(M1), Ent(Comp(Seq(M1, ResourceCost(M1)))))) = Comp(Seq(M1, ResourceCost(M1)))
+    [1.00] Comp(Seq(Risk(M1), Ent(Comp(Seq(M1, Comp(Seq(M1, ResourceCost(M1)))))))) = Comp(Seq(M1, ResourceCost(M1)))
+    [1.00] Comp(Seq(M1, Risk(Comp(Seq(Comp(Seq(M2, Ent(M2))), ResourceCost(Comp(Seq(M2, Ent(M2))))))))) = Comp(Seq(M1, ResourceCost(M1)))
+
+  Phase 2: Generating conjectures...
+  Generated 24 novel conjectures
+
+  Phase 3: Verifying conjectures (Parallel)...
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall M1.Forall M2.Seq(M1, M2) = Seq(M2, M1)
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall M1.Forall M2.ResourceCost(Par_Dyn(M1, M2)) <= ResourceCost(Seq(M1, M2))
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall M1.Forall M2.Comp(Par_Dyn(M1, M2)) <= Comp(Seq(M1, M2))
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall M1.Forall M2.Forall M3.Par_Dyn(Par_Dyn(M1, M2), M3) = Par_Dyn(M1, Par_Dyn(M2, M3))
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall K.Forall M2.Forall V.Forall M1.Attn(phi(Compose(K, M1)), K, M2) = V
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall K.Forall V.Forall M1.phi(Attn(V, K, ID_M)) = M1
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall Q.Forall M1.Forall M2.Forall K.Forall V.Attn(Compose(Choice(K, Q, M1), M1), V, M1) = M2
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall M1.Forall M2.Forall V.Attn(phi(Superpose(M2, V)), M2, M2) = M1
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall K.Forall V.Forall M1.Forall Q.Attn(Transpose(Attn(K, V, M1)), M1, ID_M) = Q
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall M1.Forall M2.Forall V.Forall K.Attn(phi(Choice(K, K, M2)), V, M1) = K
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall M1.Forall K.Attn(phi(M1), K, ID_M) = M1
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall Q.Forall M2.Forall V.Attn(Compose(Attn(ID_M, Q, Q), ID_M), ID_M, M2) = V
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall K.Forall M2.Forall V.Forall M1.Compose(Attn(M2, V, ID_M), K) = M1
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall Q.Forall M2.Forall K.Transpose(Attn(Q, K, Q)) = M2
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall K.Forall M2.Forall V.Attn(Transpose(Superpose(M2, V)), V, K) = V
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall M1.Forall V.Attn(Transpose(ID_M), ID_M, V) = M1
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall Q.Forall M2.Forall V.Attn(phi(Attn(M2, ID_M, M2)), V, Q) = M2
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall Q.Forall V.Par_Dyn(Attn(ID_M, V, Q), V) = ID_M
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall Q.Forall M2.Forall M1.Attn(Transpose(Choice(ID_M, ID_M, Q)), Q, M1) = M2
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall Q.Forall M2.Forall V.Attn(Compose(Superpose(M2, Q), Q), V, M2) = ID_M
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall Q.Forall M2.Forall K.Choice(Attn(Q, Q, M2), ID_M, K) = Q
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall M1.Forall K.Forall Q.Sec_Filter(Attn(ID_M, M1, Q)) = K
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall K.Forall V.Forall M2.Forall Q.Attn(Attn(K, V, M2), V, V) = Q
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall K.Forall V.Forall M2.Forall Q.Attn(Superpose(Choice(V, M2, K), ID_M), ID_M, Q) = ID_M
+
+  Phase 4: Analyzing failures...
+    -| Counter-axiom: ~Forall M1.Forall M2.Seq(M1, M2) = Seq(M2, M1)
+    -| Counter-axiom: ~Forall M1.Forall M2.ResourceCost(Par_Dyn(M1, M2)) <= ResourceCost(Seq(M1, M2))
+    -| Counter-axiom: ~Forall M1.Forall M2.Comp(Par_Dyn(M1, M2)) <= Comp(Seq(M1, M2))
+    -| Counter-axiom: ~Forall M1.Forall M2.Forall M3.Par_Dyn(Par_Dyn(M1, M2), M3) = Par_Dyn(M1, Par_Dyn(M2, M3))
+    -| Counter-axiom: ~Forall K.Forall M2.Forall V.Forall M1.Attn(phi(Compose(K, M1)), K, M2) = V
+    -| Counter-axiom: ~Forall K.Forall V.Forall M1.phi(Attn(V, K, ID_M)) = M1
+    -| Counter-axiom: ~Forall Q.Forall M1.Forall M2.Forall K.Forall V.Attn(Compose(Choice(K, Q, M1), M1), V, M1) = M2
+    -| Counter-axiom: ~Forall M1.Forall M2.Forall V.Attn(phi(Superpose(M2, V)), M2, M2) = M1
+    -| Counter-axiom: ~Forall K.Forall V.Forall M1.Forall Q.Attn(Transpose(Attn(K, V, M1)), M1, ID_M) = Q
+    -| Counter-axiom: ~Forall M1.Forall M2.Forall V.Forall K.Attn(phi(Choice(K, K, M2)), V, M1) = K
+    -| Counter-axiom: ~Forall Q.Forall M2.Forall K.Transpose(Attn(Q, K, Q)) = M2
+    -| Counter-axiom: ~Forall K.Forall M2.Forall V.Attn(Transpose(Superpose(M2, V)), V, K) = V
+    -| Counter-axiom: ~Forall Q.Forall M2.Forall V.Attn(Compose(Superpose(M2, Q), Q), V, M2) = ID_M
+    -| Counter-axiom: ~Forall M1.Forall K.Forall Q.Sec_Filter(Attn(ID_M, M1, Q)) = K
+    -| Counter-axiom: ~Forall K.Forall V.Forall M2.Forall Q.Attn(Superpose(Choice(V, M2, K), ID_M), ID_M, Q) = ID_M
+
+  Cycle 0 complete in 193.2s
+  Proved: 0 | Failed: 24 | Counter-axioms: 15
+
+============================================================
+  DISCOVERY CYCLE 1
+  Axioms: 66  Lemmas: 0  Counter-axioms: 15
+============================================================
+
+  Phase 1: Saturating knowledge base...
+    [SATURATE] Admitted 50 clauses... (Heap: 496)
+    [SATURATE] Admitted 100 clauses... (Heap: 913)
+  Found 102 interesting consequences
+    [1.00] Comp(Seq(Risk(M1), Ent(Comp(Seq(M1, M1))))) = Comp(Seq(M1, ResourceCost(M1)))
+    [1.00] Comp(Seq(Risk(M1), Ent(Comp(Seq(M1, ResourceCost(M1)))))) = Comp(Seq(M1, ResourceCost(M1)))
+    [1.00] Comp(Seq(Risk(M1), Ent(Comp(Seq(M1, Comp(Seq(M1, ResourceCost(M1)))))))) = Comp(Seq(M1, ResourceCost(M1)))
+    [1.00] Comp(Seq(M1, Risk(Comp(Seq(Comp(Seq(M2, Ent(M2))), ResourceCost(Comp(Seq(M2, Ent(M2))))))))) = Comp(Seq(M1, ResourceCost(M1)))
+    [1.00] Comp(Seq(M1, Risk(Comp(Seq(Comp(Seq(M2, Ent(M2))), M2))))) = Comp(Seq(M1, ResourceCost(M1)))
+
+  Phase 2: Generating conjectures...
+  Generated 24 novel conjectures
+
+  Phase 3: Verifying conjectures (Parallel)...
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall M1.Forall M2.Risk(Par_Dyn(M1, M2)) = max(Risk(M1), Risk(M2))
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall M1.Forall M2.Ent(Par_Dyn(M1, M2)) = min(Ent(M1), Ent(M2))
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall M1.Forall M2.ResourceCost(Seq(M1, M2)) = ResourceCost(Seq(M2, M1))
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall M1.Barrier(M1, P_TRUE) = M1
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall K.Forall M2.Forall Q.Attn(phi(Compose(M2, ID_M)), K, Q) = ID_M
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall K.Forall M2.Forall M1.Attn(phi(K), M2, M1) = ID_M
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall K.Forall M2.phi(Attn(K, ID_M, M2)) = ID_M
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall M2.Attn(phi(Superpose(M2, M2)), ID_M, M2) = ID_M
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall M1.Forall M2.Forall V.Forall Q.Attn(phi(Attn(M2, M1, M2)), ID_M, Q) = V
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall M1.Forall Q.Forall V.Forall M2.Attn(phi(Choice(M2, Q, V)), M1, V) = Q
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall M1.Forall M2.Forall K.Attn(phi(Par_Dyn(M1, K)), M1, M1) = M2
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall Q.Forall V.Forall K.Attn(Transpose(Superpose(ID_M, V)), Q, V) = K
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall K.Forall Q.Transpose(Attn(K, K, Q)) = Q
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall Q.Forall M2.Forall M1.Forall K.Attn(Transpose(Attn(Q, Q, M2)), ID_M, K) = M1
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall K.Forall V.Forall M1.Attn(Transpose(Choice(ID_M, K, M1)), V, ID_M) = V
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall K.Forall V.Forall M2.Forall M1.Attn(Compose(Superpose(V, V), K), K, M2) = M1
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall Q.Forall M1.Attn(Compose(Attn(Q, M1, M1), ID_M), ID_M, Q) = ID_M
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall M1.Forall V.Forall Q.Forall K.Attn(Sec_Filter(Superpose(M1, V)), ID_M, K) = Q
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall M1.Forall M2.phi(Compose(M1, M2)) = ID_M
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall M1.Forall V.Forall K.Compose(Attn(V, M1, M1), K) = M1
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall Q.Forall V.Forall M2.Attn(Superpose(Superpose(V, ID_M), V), Q, ID_M) = M2
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall Q.Forall M2.Attn(Comp(Attn(Q, ID_M, ID_M)), ID_M, M2) = ID_M
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall M1.Forall Q.Forall V.Forall K.Forall M2.Attn(Choice(Choice(V, M1, ID_M), M1, ID_M), K, M2) = Q
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall M1.Forall K.Attn(Compose(Choice(M1, ID_M, ID_M), ID_M), M1, K) = K
+
+  Phase 4: Analyzing failures...
+    -| Counter-axiom: ~Forall M1.Forall M2.ResourceCost(Seq(M1, M2)) = ResourceCost(Seq(M2, M1))
+    -| Counter-axiom: ~Forall M1.Barrier(M1, P_TRUE) = M1
+    -| Counter-axiom: ~Forall K.Forall M2.Forall Q.Attn(phi(Compose(M2, ID_M)), K, Q) = ID_M
+    -| Counter-axiom: ~Forall K.Forall M2.Forall M1.Attn(phi(K), M2, M1) = ID_M
+    -| Counter-axiom: ~Forall K.Forall M2.phi(Attn(K, ID_M, M2)) = ID_M
+    -| Counter-axiom: ~Forall M1.Forall Q.Forall V.Forall M2.Attn(phi(Choice(M2, Q, V)), M1, V) = Q
+    -| Counter-axiom: ~Forall K.Forall Q.Transpose(Attn(K, K, Q)) = Q
+    -| Counter-axiom: ~Forall K.Forall V.Forall M2.Forall M1.Attn(Compose(Superpose(V, V), K), K, M2) = M1
+    -| Counter-axiom: ~Forall M1.Forall V.Forall Q.Forall K.Attn(Sec_Filter(Superpose(M1, V)), ID_M, K) = Q
+    -| Counter-axiom: ~Forall M1.Forall M2.phi(Compose(M1, M2)) = ID_M
+    -| Counter-axiom: ~Forall M1.Forall V.Forall K.Compose(Attn(V, M1, M1), K) = M1
+    -| Counter-axiom: ~Forall Q.Forall V.Forall M2.Attn(Superpose(Superpose(V, ID_M), V), Q, ID_M) = M2
+    -| Counter-axiom: ~Forall M1.Forall Q.Forall V.Forall K.Forall M2.Attn(Choice(Choice(V, M1, ID_M), M1, ID_M), K, M2) = Q
+    -| Counter-axiom: ~Forall M1.Forall K.Attn(Compose(Choice(M1, ID_M, ID_M), ID_M), M1, K) = K
+
+  Cycle 1 complete in 194.7s
+  Proved: 0 | Failed: 24 | Counter-axioms: 14
+
+============================================================
+  DISCOVERY CYCLE 2
+  Axioms: 66  Lemmas: 0  Counter-axioms: 29
+============================================================
+
+  Phase 1: Saturating knowledge base...
+    [SATURATE] Admitted 50 clauses... (Heap: 488)
+    [SATURATE] Admitted 100 clauses... (Heap: 929)
+  Found 102 interesting consequences
+    [1.00] Comp(Seq(Risk(M1), Ent(Comp(Seq(M1, M1))))) = Comp(Seq(M1, ResourceCost(M1)))
+    [1.00] Comp(Seq(Risk(M1), Ent(Comp(Seq(M1, ResourceCost(M1)))))) = Comp(Seq(M1, ResourceCost(M1)))
+    [1.00] Comp(Seq(Risk(M1), Ent(Comp(Seq(M1, Comp(Seq(M1, ResourceCost(M1)))))))) = Comp(Seq(M1, ResourceCost(M1)))
+    [1.00] Comp(Seq(M1, Risk(Comp(Seq(Comp(Seq(M2, Ent(M2))), ResourceCost(Comp(Seq(M2, Ent(M2))))))))) = Comp(Seq(M1, ResourceCost(M1)))
+    [1.00] Comp(Seq(M1, Risk(Comp(Seq(Comp(Seq(M2, Ent(M2))), M2))))) = Comp(Seq(M1, ResourceCost(M1)))
+
+  Phase 2: Generating conjectures...
+  Generated 23 novel conjectures
+
+  Phase 3: Verifying conjectures (Parallel)...
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall M1.Par_Dyn(M1, M1) = M1
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall M1.Forall M2.Comp(Seq(M1, M2)) = Comp(Seq(M2, M1))
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall M1.Forall M2.ResourceCost(Par_Dyn(M1, M2)) = ResourceCost(Par_Dyn(M2, M1))
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall M1.Forall Q.Forall K.Attn(phi(Compose(ID_M, M1)), M1, K) = Q
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall M1.Forall K.Attn(Transpose(Compose(M1, K)), M1, K) = K
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall M1.Forall V.Forall K.Attn(phi(Superpose(V, M1)), V, K) = V
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall Q.Forall V.Forall M1.Forall K.Attn(phi(Choice(Q, M1, K)), K, Q) = V
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall K.Forall M2.Attn(Transpose(Choice(ID_M, ID_M, K)), K, M2) = ID_M
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall K.Forall Q.Attn(Compose(Superpose(K, Q), Q), Q, ID_M) = ID_M
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall M1.Forall K.Forall Q.Attn(phi(Attn(M1, Q, K)), Q, Q) = Q
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall M1.Forall V.Forall Q.Forall K.Attn(Transpose(Superpose(V, M1)), K, K) = Q
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall K.Forall M2.Forall M1.Forall Q.Attn(Compose(Attn(M2, K, Q), ID_M), Q, Q) = M1
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall M2.Forall V.Attn(Transpose(M2), M2, V) = ID_M
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall Q.Forall V.Forall K.Attn(Transpose(Attn(Q, Q, ID_M)), K, Q) = V
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall M1.Forall V.Forall Q.Sec_Filter(Attn(V, M1, M1)) = Q
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall M1.Forall V.Forall Q.Forall K.Attn(Par_Dyn(Superpose(M1, ID_M), M1), K, V) = Q
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall K.Forall V.Forall M2.Attn(Compose(Choice(V, K, ID_M), V), K, M2) = V
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall M1.Forall Q.Transpose(Attn(M1, Q, ID_M)) = Q
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall M1.Forall V.Forall Q.Compose(Attn(M1, M1, V), Q) = M1
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall M1.Forall M2.Forall K.Attn(Choice(Superpose(M1, ID_M), K, ID_M), ID_M, ID_M) = M2
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall M1.Forall M2.Forall K.Attn(phi(ID_M), M2, M1) = K
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall M1.Forall M2.Forall Q.Attn(Superpose(Superpose(M1, ID_M), Q), M2, M1) = M1
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall Q.Forall V.Forall M1.phi(Attn(V, Q, ID_M)) = M1
+
+  Phase 4: Analyzing failures...
+    -| Counter-axiom: ~Forall M1.Forall K.Attn(Transpose(Compose(M1, K)), M1, K) = K
+    -| Counter-axiom: ~Forall M1.Forall V.Forall K.Attn(phi(Superpose(V, M1)), V, K) = V
+    -| Counter-axiom: ~Forall Q.Forall V.Forall M1.Forall K.Attn(phi(Choice(Q, M1, K)), K, Q) = V
+    -| Counter-axiom: ~Forall M1.Forall V.Forall Q.Forall K.Attn(Transpose(Superpose(V, M1)), K, K) = Q
+    -| Counter-axiom: ~Forall M2.Forall V.Attn(Transpose(M2), M2, V) = ID_M
+    -| Counter-axiom: ~Forall M1.Forall V.Forall Q.Sec_Filter(Attn(V, M1, M1)) = Q
+    -| Counter-axiom: ~Forall M1.Forall V.Forall Q.Compose(Attn(M1, M1, V), Q) = M1
+    * Oracle axiom: Forall M1.Forall M2.(ResourceCost(M2) = R_ZERO -> ResourceCost(Seq(M1, M2)) = ResourceCost(M1))
+
+  Cycle 2 complete in 192.9s
+  Proved: 0 | Failed: 23 | Counter-axioms: 7
+
+============================================================
+  DISCOVERY CYCLE 3
+  Axioms: 66  Lemmas: 0  Counter-axioms: 36
+============================================================
+
+  Phase 1: Saturating knowledge base...
+    [SATURATE] Admitted 50 clauses... (Heap: 497)
+    [SATURATE] Admitted 100 clauses... (Heap: 937)
+  Found 102 interesting consequences
+    [1.00] Comp(Seq(Risk(M1), Ent(Comp(Seq(M1, M1))))) = Comp(Seq(M1, ResourceCost(M1)))
+    [1.00] Comp(Seq(Risk(M1), Ent(Comp(Seq(M1, ResourceCost(M1)))))) = Comp(Seq(M1, ResourceCost(M1)))
+    [1.00] Comp(Seq(Risk(M1), Ent(Comp(Seq(M1, Comp(Seq(M1, ResourceCost(M1)))))))) = Comp(Seq(M1, ResourceCost(M1)))
+    [1.00] Comp(Seq(M1, Risk(Comp(Seq(Comp(Seq(M2, Ent(M2))), ResourceCost(Comp(Seq(M2, Ent(M2))))))))) = Comp(Seq(M1, ResourceCost(M1)))
+    [1.00] Comp(Seq(M1, Risk(Comp(Seq(Comp(Seq(M2, Ent(M2))), M2))))) = Comp(Seq(M1, ResourceCost(M1)))
+
+  Phase 2: Generating conjectures...
+  Generated 20 novel conjectures
+
+  Phase 3: Verifying conjectures (Parallel)...
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall M1.Forall M2.Forall V.Forall K.Attn(Compose(Compose(M2, ID_M), ID_M), M1, V) = K
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall Q.Forall V.Forall M2.Forall K.Attn(Transpose(Compose(ID_M, Q)), V, M2) = K
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall Q.Forall M2.Forall K.Attn(phi(Choice(Q, ID_M, M2)), Q, Q) = K
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall Q.Forall V.Forall M2.Attn(phi(Compose(V, ID_M)), M2, V) = Q
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall M1.Forall V.Attn(phi(Superpose(M1, M1)), V, ID_M) = V
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall Q.Forall V.Forall M2.Attn(Compose(Choice(V, ID_M, M2), Q), M2, ID_M) = ID_M
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall Q.Forall V.Forall M1.Forall M2.Attn(Transpose(Choice(Q, ID_M, ID_M)), M1, V) = M2
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall Q.Forall V.Forall M2.Forall K.Attn(Transpose(Attn(V, ID_M, M2)), K, Q) = K
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall Q.Forall V.Forall M2.Forall K.Attn(Transpose(Superpose(V, M2)), ID_M, Q) = K
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall Q.Forall M1.Attn(Compose(Superpose(Q, M1), ID_M), ID_M, M1) = M1
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall K.Forall M2.Forall M1.Forall Q.Transpose(Attn(K, M2, Q)) = M1
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall M1.Forall M2.Forall K.Forall Q.Attn(Compose(Attn(M1, M1, Q), K), M1, K) = M2
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall K.Forall V.Forall Q.Attn(phi(Attn(K, K, K)), Q, V) = V
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall Q.Forall M2.Forall M1.Attn(Seq(Choice(Q, M2, M1), ID_M), ID_M, M2) = ID_M
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall Q.Forall M2.Forall V.Forall K.Compose(Attn(M2, K, V), Q) = K
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall Q.Forall M1.Forall M2.Forall K.Forall V.Attn(Choice(Superpose(ID_M, Q), ID_M, M2), K, V) = M1
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall Q.Forall M1.Forall K.Forall V.Attn(Par_Dyn(Superpose(V, K), Q), M1, Q) = Q
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall K.Forall M2.Forall M1.Attn(phi(M2), K, M1) = ID_M
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall Q.phi(Compose(Q, ID_M)) = ID_M
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall M1.Forall Q.Forall M2.Forall V.Attn(Attn(Choice(M2, V, V), Q, Q), M1, ID_M) = Q
+
+  Phase 4: Analyzing failures...
+    -| Counter-axiom: ~Forall K.Forall M2.Forall M1.Forall Q.Transpose(Attn(K, M2, Q)) = M1
+    -| Counter-axiom: ~Forall Q.Forall M2.Forall V.Forall K.Compose(Attn(M2, K, V), Q) = K
+    -| Counter-axiom: ~Forall K.Forall M2.Forall M1.Attn(phi(M2), K, M1) = ID_M
+    -| Counter-axiom: ~Forall Q.phi(Compose(Q, ID_M)) = ID_M
+
+  Cycle 3 complete in 192.6s
+  Proved: 0 | Failed: 20 | Counter-axioms: 4
+
+============================================================
+  DISCOVERY CYCLE 4
+  Axioms: 66  Lemmas: 0  Counter-axioms: 40
+============================================================
+
+  Phase 1: Saturating knowledge base...
+    [SATURATE] Admitted 50 clauses... (Heap: 470)
+    [SATURATE] Admitted 100 clauses... (Heap: 942)
+  Found 102 interesting consequences
+    [1.00] Comp(Seq(Risk(M1), Ent(Comp(Seq(M1, M1))))) = Comp(Seq(M1, ResourceCost(M1)))
+    [1.00] Comp(Seq(Risk(M1), Ent(Comp(Seq(M1, ResourceCost(M1)))))) = Comp(Seq(M1, ResourceCost(M1)))
+    [1.00] Comp(Seq(Risk(M1), Ent(Comp(Seq(M1, Comp(Seq(M1, ResourceCost(M1)))))))) = Comp(Seq(M1, ResourceCost(M1)))
+    [1.00] Comp(Seq(M1, Risk(Comp(Seq(Comp(Seq(M2, Ent(M2))), ResourceCost(Comp(Seq(M2, Ent(M2))))))))) = Comp(Seq(M1, ResourceCost(M1)))
+    [1.00] Comp(Seq(M1, Risk(Comp(Seq(Comp(Seq(M2, Ent(M2))), M2))))) = Comp(Seq(M1, ResourceCost(M1)))
+
+  Phase 2: Generating conjectures...
+  Generated 20 novel conjectures
+
+  Phase 3: Verifying conjectures (Parallel)...
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall Q.Forall M2.Attn(phi(Compose(Q, Q)), M2, M2) = M2
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall K.Forall V.Forall M2.Forall Q.Attn(phi(Par_Dyn(K, V)), Q, ID_M) = M2
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall M1.Forall M2.Forall V.Attn(Transpose(Compose(M2, V)), V, M1) = M1
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall M2.Forall V.Attn(phi(Superpose(ID_M, ID_M)), M2, ID_M) = V
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall K.Forall M2.Forall Q.Attn(phi(M2), K, K) = Q
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall M1.Forall V.phi(Attn(V, ID_M, V)) = M1
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall M1.Forall V.Forall M2.Attn(phi(Choice(V, M1, ID_M)), V, M2) = M1
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall K.Forall V.Forall Q.Attn(Compose(Compose(K, Q), V), V, Q) = ID_M
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall K.Forall M2.Forall M1.Attn(Transpose(Choice(K, ID_M, M1)), M2, K) = ID_M
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall K.Forall V.Forall M1.Attn(Compose(Attn(ID_M, ID_M, V), K), M1, ID_M) = V
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall M1.Forall M2.Forall K.Attn(Compose(Choice(M2, M1, K), M1), K, M2) = K
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall M1.Forall V.Forall M2.Forall K.Attn(Transpose(Superpose(V, K)), M1, M2) = V
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall K.Forall M2.Forall Q.Attn(Transpose(Attn(K, Q, M2)), M2, ID_M) = ID_M
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall M1.Forall M2.Forall K.Forall Q.Attn(phi(Attn(M1, M1, M2)), ID_M, Q) = K
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall Q.Forall M2.Forall V.Attn(Compose(Superpose(M2, M2), M2), Q, V) = Q
+    [FAIL] FAILED (RESOURCE_EXHAUSTION): Forall K.Forall V.Comp(Attn(V, K, V)) = ID_M
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall Q.Forall M1.Forall K.Forall M2.Attn(Comp(Superpose(K, M2)), Q, M1) = M1
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall K.Forall V.Forall M1.Par_Dyn(Attn(K, V, M1), M1) = M1
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall K.Forall M2.Forall V.Forall M1.Attn(Attn(Attn(M2, ID_M, K), ID_M, M1), K, M2) = V
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall Q.Forall M1.Forall M2.Forall V.Forall K.Attn(Choice(Choice(V, M2, K), K, Q), V, ID_M) = M1
+
+  Phase 4: Analyzing failures...
+    -| Counter-axiom: ~Forall Q.Forall M2.Attn(phi(Compose(Q, Q)), M2, M2) = M2
+    -| Counter-axiom: ~Forall M1.Forall M2.Forall V.Attn(Transpose(Compose(M2, V)), V, M1) = M1
+    -| Counter-axiom: ~Forall K.Forall M2.Forall Q.Attn(phi(M2), K, K) = Q
+    -| Counter-axiom: ~Forall M1.Forall M2.Forall K.Attn(Compose(Choice(M2, M1, K), M1), K, M2) = K
+    -| Counter-axiom: ~Forall M1.Forall V.Forall M2.Forall K.Attn(Transpose(Superpose(V, K)), M1, M2) = V
+    -| Counter-axiom: ~Forall M1.Forall M2.Forall K.Forall Q.Attn(phi(Attn(M1, M1, M2)), ID_M, Q) = K
+    -| Counter-axiom: ~Forall Q.Forall M2.Forall V.Attn(Compose(Superpose(M2, M2), M2), Q, V) = Q
+    -| Counter-axiom: ~Forall Q.Forall M1.Forall K.Forall M2.Attn(Comp(Superpose(K, M2)), Q, M1) = M1
+    -| Counter-axiom: ~Forall K.Forall V.Forall M1.Par_Dyn(Attn(K, V, M1), M1) = M1
+    -| Counter-axiom: ~Forall K.Forall M2.Forall V.Forall M1.Attn(Attn(Attn(M2, ID_M, K), ID_M, M1), K, M2) = V
+    -| Counter-axiom: ~Forall Q.Forall M1.Forall M2.Forall V.Forall K.Attn(Choice(Choice(V, M2, K), K, Q), V, ID_M) = M1
+
+  Cycle 4 complete in 175.9s
+  Proved: 0 | Failed: 20 | Counter-axioms: 11
+
+============================================================
+  DISCOVERY REPORT
+============================================================
+
+  Statistics:
+    total_axioms: 66
+    total_lemmas: 0
+    total_counter_axioms: 51
+    total_discoveries: 1
+    total_oracle_stipulations: 1
+
+  Top Discoveries (by interestingness):
+    1. [ORACLE-STIPULATED|0.46|oracle] Forall M1.Forall M2.(ResourceCost(M2) = R_ZERO -> ResourceCost(Seq(M1, M2)) = ResourceCost(M1))
+
+  Counter-Axioms (failed conjectures):
+    -| ~Forall M1.Forall M2.Seq(M1, M2) = Seq(M2, M1)
+    -| ~Forall M1.Forall M2.ResourceCost(Par_Dyn(M1, M2)) <= ResourceCost(Seq(M1, M2))
+    -| ~Forall M1.Forall M2.Comp(Par_Dyn(M1, M2)) <= Comp(Seq(M1, M2))
+    -| ~Forall M1.Forall M2.Forall M3.Par_Dyn(Par_Dyn(M1, M2), M3) = Par_Dyn(M1, Par_Dyn(M2, M3))
+    -| ~Forall K.Forall M2.Forall V.Forall M1.Attn(phi(Compose(K, M1)), K, M2) = V
+    -| ~Forall K.Forall V.Forall M1.phi(Attn(V, K, ID_M)) = M1
+    -| ~Forall Q.Forall M1.Forall M2.Forall K.Forall V.Attn(Compose(Choice(K, Q, M1), M1), V, M1) = M2
+    -| ~Forall M1.Forall M2.Forall V.Attn(phi(Superpose(M2, V)), M2, M2) = M1
+    -| ~Forall K.Forall V.Forall M1.Forall Q.Attn(Transpose(Attn(K, V, M1)), M1, ID_M) = Q
+    -| ~Forall M1.Forall M2.Forall V.Forall K.Attn(phi(Choice(K, K, M2)), V, M1) = K
+    -| ~Forall Q.Forall M2.Forall K.Transpose(Attn(Q, K, Q)) = M2
+    -| ~Forall K.Forall M2.Forall V.Attn(Transpose(Superpose(M2, V)), V, K) = V
+    -| ~Forall Q.Forall M2.Forall V.Attn(Compose(Superpose(M2, Q), Q), V, M2) = ID_M
+    -| ~Forall M1.Forall K.Forall Q.Sec_Filter(Attn(ID_M, M1, Q)) = K
+    -| ~Forall K.Forall V.Forall M2.Forall Q.Attn(Superpose(Choice(V, M2, K), ID_M), ID_M, Q) = ID_M
+    -| ~Forall M1.Forall M2.ResourceCost(Seq(M1, M2)) = ResourceCost(Seq(M2, M1))
+    -| ~Forall M1.Barrier(M1, P_TRUE) = M1
+    -| ~Forall K.Forall M2.Forall Q.Attn(phi(Compose(M2, ID_M)), K, Q) = ID_M
+    -| ~Forall K.Forall M2.Forall M1.Attn(phi(K), M2, M1) = ID_M
+    -| ~Forall K.Forall M2.phi(Attn(K, ID_M, M2)) = ID_M
+    -| ~Forall M1.Forall Q.Forall V.Forall M2.Attn(phi(Choice(M2, Q, V)), M1, V) = Q
+    -| ~Forall K.Forall Q.Transpose(Attn(K, K, Q)) = Q
+    -| ~Forall K.Forall V.Forall M2.Forall M1.Attn(Compose(Superpose(V, V), K), K, M2) = M1
+    -| ~Forall M1.Forall V.Forall Q.Forall K.Attn(Sec_Filter(Superpose(M1, V)), ID_M, K) = Q
+    -| ~Forall M1.Forall M2.phi(Compose(M1, M2)) = ID_M
+    -| ~Forall M1.Forall V.Forall K.Compose(Attn(V, M1, M1), K) = M1
+    -| ~Forall Q.Forall V.Forall M2.Attn(Superpose(Superpose(V, ID_M), V), Q, ID_M) = M2
+    -| ~Forall M1.Forall Q.Forall V.Forall K.Forall M2.Attn(Choice(Choice(V, M1, ID_M), M1, ID_M), K, M2) = Q
+    -| ~Forall M1.Forall K.Attn(Compose(Choice(M1, ID_M, ID_M), ID_M), M1, K) = K
+    -| ~Forall M1.Forall K.Attn(Transpose(Compose(M1, K)), M1, K) = K
+    -| ~Forall M1.Forall V.Forall K.Attn(phi(Superpose(V, M1)), V, K) = V
+    -| ~Forall Q.Forall V.Forall M1.Forall K.Attn(phi(Choice(Q, M1, K)), K, Q) = V
+    -| ~Forall M1.Forall V.Forall Q.Forall K.Attn(Transpose(Superpose(V, M1)), K, K) = Q
+    -| ~Forall M2.Forall V.Attn(Transpose(M2), M2, V) = ID_M
+    -| ~Forall M1.Forall V.Forall Q.Sec_Filter(Attn(V, M1, M1)) = Q
+    -| ~Forall M1.Forall V.Forall Q.Compose(Attn(M1, M1, V), Q) = M1
+    -| ~Forall K.Forall M2.Forall M1.Forall Q.Transpose(Attn(K, M2, Q)) = M1
+    -| ~Forall Q.Forall M2.Forall V.Forall K.Compose(Attn(M2, K, V), Q) = K
+    -| ~Forall K.Forall M2.Forall M1.Attn(phi(M2), K, M1) = ID_M
+    -| ~Forall Q.phi(Compose(Q, ID_M)) = ID_M
+    -| ~Forall Q.Forall M2.Attn(phi(Compose(Q, Q)), M2, M2) = M2
+    -| ~Forall M1.Forall M2.Forall V.Attn(Transpose(Compose(M2, V)), V, M1) = M1
+    -| ~Forall K.Forall M2.Forall Q.Attn(phi(M2), K, K) = Q
+    -| ~Forall M1.Forall M2.Forall K.Attn(Compose(Choice(M2, M1, K), M1), K, M2) = K
+    -| ~Forall M1.Forall V.Forall M2.Forall K.Attn(Transpose(Superpose(V, K)), M1, M2) = V
+    -| ~Forall M1.Forall M2.Forall K.Forall Q.Attn(phi(Attn(M1, M1, M2)), ID_M, Q) = K
+    -| ~Forall Q.Forall M2.Forall V.Attn(Compose(Superpose(M2, M2), M2), Q, V) = Q
+    -| ~Forall Q.Forall M1.Forall K.Forall M2.Attn(Comp(Superpose(K, M2)), Q, M1) = M1
+    -| ~Forall K.Forall V.Forall M1.Par_Dyn(Attn(K, V, M1), M1) = M1
+    -| ~Forall K.Forall M2.Forall V.Forall M1.Attn(Attn(Attn(M2, ID_M, K), ID_M, M1), K, M2) = V
+    -| ~Forall Q.Forall M1.Forall M2.Forall V.Forall K.Attn(Choice(Choice(V, M2, K), K, Q), V, ID_M) = M1
+
+  Oracle-Stipulated Axioms:
+    * Forall M1.Forall M2.(ResourceCost(M2) = R_ZERO -> ResourceCost(Seq(M1, M2)) = ResourceCost(M1))
+
+============================================================
+  Total runtime: 1056.4s
+  Theorems discovered: 1
+  Counter-axioms: 51
+  Oracle axioms: 1
+============================================================

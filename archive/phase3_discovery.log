@@ -1,0 +1,100 @@
+
+[GOVERNANCE] Starting Discovery session with budget 1.0
+Initial State: LatentState(entropy=3.117778023711206, attention_coherence=1.0, embedding_norm=76.0, manifold_divergence=0.0, centroid_similarity=1.0)
+
+
+[EDGE,RECOVER] step=1 auth=True rec=True risk=0.000 regime=CORRIDOR tightest=novelty min_margin=+0.019 [######------] I=0.472 (recovery) safety=+0.069 novelty=+0.019
+--- CYCLE 0 [AUTHORIZED] ---
+  Phase 1: Saturating (depth=8)...
+    [SATURATE] Processed 50 clauses... (Heap: 124)
+    [SATURATE] Processed 100 clauses... (Heap: 174)
+    [SATURATE] Processed 150 clauses... (Heap: 224)
+    [SATURATE] Processed 200 clauses... (Heap: 274)
+    [SATURATE] Processed 250 clauses... (Heap: 324)
+    [SATURATE] Processed 300 clauses... (Heap: 374)
+    [SATURATE] Processed 350 clauses... (Heap: 424)
+    [SATURATE] Processed 400 clauses... (Heap: 474)
+    [SATURATE] Processed 450 clauses... (Heap: 524)
+    [SATURATE] Processed 500 clauses... (Heap: 574)
+    Found 1 potential theorems.
+  Phase 2: Promoted 14 conjectures.
+  Phase 3: Verifying (max_steps=1000)...
+    [OK] PROVED: Forall M1.Risk(Seq(M1, ID_M)) = Risk(M1) [EGRAPH_NORMALIZATION]
+    [OK] PROVED: Forall M1.Risk(Par_Dyn(M1, ID_M)) = Risk(M1) [EGRAPH_NORMALIZATION]
+    [OK] PROVED: Forall M1.ResourceCost(Seq(M1, ID_M)) = ResourceCost(M1) [EGRAPH_NORMALIZATION]
+    [OK] PROVED: Forall M1.ResourceCost(Par_Dyn(M1, ID_M)) = ResourceCost(M1) [EGRAPH_NORMALIZATION]
+    [OK] PROVED: Forall M1.Comp(Seq(M1, ID_M)) = Comp(M1) [EGRAPH_NORMALIZATION]
+    [OK] PROVED: Forall M1.Comp(Par_Dyn(M1, ID_M)) = Comp(M1) [EGRAPH_NORMALIZATION]
+    [OK] PROVED: Forall M1.Ent(Seq(M1, ID_M)) = Ent(M1) [EGRAPH_NORMALIZATION]
+    [OK] PROVED: Forall M1.Ent(Par_Dyn(M1, ID_M)) = Ent(M1) [EGRAPH_NORMALIZATION]
+    [FAIL] Forall M1.Forall M2.Seq(M1, M2) = Seq(M2, M1) | Stats: {'clauses_generated': 1035, 'max_risk_depth': 0, 'max_par_depth': 0}
+    [FAIL] Forall M1.Forall M2.ResourceCost(Par_Dyn(M1, M2)) <= ResourceCost(Seq(M1, M2)) | Stats: {'clauses_generated': 1035, 'max_risk_depth': 0, 'max_par_depth': 0}
+    [FAIL] Forall M1.Forall M2.Comp(Par_Dyn(M1, M2)) <= Comp(Seq(M1, M2)) | Stats: {'clauses_generated': 1035, 'max_risk_depth': 0, 'max_par_depth': 0}
+    [OK] PROVED: Forall M1.Forall M2.Forall M3.Par_Dyn(Par_Dyn(M1, M2), M3) = Par_Dyn(M1, Par_Dyn(M2, M3)) [EGRAPH_NORMALIZATION]
+    [FAIL] Forall M1.Risk(Par_Dyn(M1, Barrier(M1, P_TRUE))) = Risk(M1) | Stats: {'clauses_generated': 1035, 'max_risk_depth': 1, 'max_par_depth': 1}
+    [OK] PROVED: Forall M1.Risk(Superpose(M1, M1)) = Risk(M1) [EGRAPH_NORMALIZATION]
+
+--- CYCLE 1 [AUTHORIZED] ---
+[EDGE,RECOVER] step=2 auth=True rec=True risk=0.000 regime=CORRIDOR tightest=novelty min_margin=+0.028 [######------] I=0.492 (recovery) safety=+0.059 novelty=+0.028
+  Phase 1: Saturating (depth=8)...
+    [SATURATE] Processed 50 clauses... (Heap: 134)
+    [SATURATE] Processed 100 clauses... (Heap: 184)
+    [SATURATE] Processed 150 clauses... (Heap: 234)
+    [SATURATE] Processed 200 clauses... (Heap: 284)
+    [SATURATE] Processed 250 clauses... (Heap: 334)
+    [SATURATE] Processed 300 clauses... (Heap: 384)
+    [SATURATE] Processed 350 clauses... (Heap: 434)
+    [SATURATE] Processed 400 clauses... (Heap: 484)
+    [SATURATE] Processed 450 clauses... (Heap: 534)
+    [SATURATE] Processed 500 clauses... (Heap: 584)
+    Found 1 potential theorems.
+  Phase 2: Promoted 21 conjectures.
+  Phase 3: Verifying (max_steps=1050)...
+    [FAIL] Forall M1.Forall M2.Risk(Par_Dyn(M1, M2)) = max(Risk(M1), Risk(M2)) | Stats: {'clauses_generated': 1081, 'max_risk_depth': 1, 'max_par_depth': 1}
+    [FAIL] Forall M1.Forall M2.Ent(Par_Dyn(M1, M2)) = min(Ent(M1), Ent(M2)) | Stats: {'clauses_generated': 1081, 'max_risk_depth': 0, 'max_par_depth': 0}
+    [FAIL] Forall M1.Forall M2.ResourceCost(Seq(M1, M2)) = ResourceCost(Seq(M2, M1)) | Stats: {'clauses_generated': 1081, 'max_risk_depth': 0, 'max_par_depth': 0}
+    [OK] PROVED: Forall M1.Risk(Barrier(M1, P_TRUE)) = Risk(M1) [EGRAPH_NORMALIZATION]
+    [FAIL] Forall M1.Barrier(M1, P_TRUE) = M1 | Stats: {'clauses_generated': 1081, 'max_risk_depth': 0, 'max_par_depth': 0}
+    [OK] PROVED: Forall M1.Risk(Seq(Seq(M1, ID_M), ID_M)) = Risk(M1) [EGRAPH_NORMALIZATION]
+    [OK] PROVED: Forall M1.Risk(Par_Dyn(M1, Seq(M1, ID_M))) = Risk(M1) [EGRAPH_NORMALIZATION]
+    [OK] PROVED: Forall M1.Risk(Par_Dyn(Par_Dyn(M1, ID_M), ID_M)) = Risk(M1) [EGRAPH_NORMALIZATION]
+    [OK] PROVED: Forall M1.Risk(Par_Dyn(M1, Par_Dyn(M1, ID_M))) = Risk(M1) [EGRAPH_NORMALIZATION]
+    [OK] PROVED: Forall M1.Risk(Par_Dyn(M1, Superpose(M1, M1))) = Risk(M1) [EGRAPH_NORMALIZATION]
+[EDGE,RECOVER] step=3 auth=True rec=True risk=0.000 regime=CORRIDOR tightest=novelty min_margin=+0.027 [######------] I=0.491 (recovery) safety=+0.053 novelty=+0.027
+
+--- CYCLE 2 [AUTHORIZED] ---
+  Phase 1: Saturating (depth=8)...
+
+[EDGE,RECOVER] step=1 auth=True rec=True risk=0.000 regime=CORRIDOR tightest=novelty min_margin=+0.019 [######------] I=0.472 (recovery) safety=+0.069 novelty=+0.019
+[GOVERNANCE] Starting Discovery session with budget 1.0
+Initial State: LatentState(entropy=3.117778023711206, attention_coherence=1.0, embedding_norm=76.0, manifold_divergence=0.0, centroid_similarity=1.0)
+
+
+--- CYCLE 0 [AUTHORIZED] ---
+  Phase 1: Saturating (depth=8)...
+    [SATURATE] Processed 50 clauses... (Heap: 124)
+    [SATURATE] Processed 100 clauses... (Heap: 174)
+    [SATURATE] Processed 150 clauses... (Heap: 224)
+    [SATURATE] Processed 200 clauses... (Heap: 274)
+    [SATURATE] Processed 250 clauses... (Heap: 324)
+    [SATURATE] Processed 300 clauses... (Heap: 374)
+    [SATURATE] Processed 350 clauses... (Heap: 424)
+    [SATURATE] Processed 400 clauses... (Heap: 474)
+    [SATURATE] Processed 450 clauses... (Heap: 524)
+    [SATURATE] Processed 500 clauses... (Heap: 574)
+    Found 1 potential theorems.
+  Phase 2: Promoted 14 conjectures.
+  Phase 3: Verifying (max_steps=1000)...
+    [OK] PROVED: Forall M1.Risk(Seq(M1, ID_M)) = Risk(M1) [EGRAPH_NORMALIZATION]
+    [OK] PROVED: Forall M1.Risk(Par_Dyn(M1, ID_M)) = Risk(M1) [EGRAPH_NORMALIZATION]
+    [OK] PROVED: Forall M1.ResourceCost(Seq(M1, ID_M)) = ResourceCost(M1) [EGRAPH_NORMALIZATION]
+    [OK] PROVED: Forall M1.ResourceCost(Par_Dyn(M1, ID_M)) = ResourceCost(M1) [EGRAPH_NORMALIZATION]
+    [OK] PROVED: Forall M1.Comp(Seq(M1, ID_M)) = Comp(M1) [EGRAPH_NORMALIZATION]
+    [OK] PROVED: Forall M1.Comp(Par_Dyn(M1, ID_M)) = Comp(M1) [EGRAPH_NORMALIZATION]
+    [OK] PROVED: Forall M1.Ent(Seq(M1, ID_M)) = Ent(M1) [EGRAPH_NORMALIZATION]
+    [OK] PROVED: Forall M1.Ent(Par_Dyn(M1, ID_M)) = Ent(M1) [EGRAPH_NORMALIZATION]
+    [FAIL] Forall M1.Forall M2.Seq(M1, M2) = Seq(M2, M1) | Stats: {'clauses_generated': 1035, 'max_risk_depth': 0, 'max_par_depth': 0}
+    [FAIL] Forall M1.Forall M2.ResourceCost(Par_Dyn(M1, M2)) <= ResourceCost(Seq(M1, M2)) | Stats: {'clauses_generated': 1035, 'max_risk_depth': 0, 'max_par_depth': 0}
+    [FAIL] Forall M1.Forall M2.Comp(Par_Dyn(M1, M2)) <= Comp(Seq(M1, M2)) | Stats: {'clauses_generated': 1035, 'max_risk_depth': 0, 'max_par_depth': 0}
+    [OK] PROVED: Forall M1.Forall M2.Forall M3.Par_Dyn(Par_Dyn(M1, M2), M3) = Par_Dyn(M1, Par_Dyn(M2, M3)) [EGRAPH_NORMALIZATION]
+    [OK] PROVED: Forall M1.Risk(Par_Dyn(M1, Barrier(M1, P_TRUE))) = Risk(M1) [EGRAPH_NORMALIZATION]

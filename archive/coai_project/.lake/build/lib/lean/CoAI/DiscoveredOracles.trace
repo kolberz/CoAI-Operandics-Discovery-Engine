@@ -1,0 +1,32 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["badcef3b2324c63c.olean"],
+  "i": "1791223f0e0a4d17.ilean",
+  "c": "210d3cf41cc8a15d.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean;C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project\\.lake\\build\\lib\\lean c:\\Users\\admin\\.elan\\toolchains\\leanprover--lean4---v4.29.0-rc1\\bin\\lean.exe C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project\\CoAI\\DiscoveredOracles.lean -o C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project\\.lake\\build\\lib\\lean\\CoAI\\DiscoveredOracles.olean -i C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project\\.lake\\build\\lib\\lean\\CoAI\\DiscoveredOracles.ilean -c C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project\\.lake\\build\\ir\\CoAI\\DiscoveredOracles.c --setup C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project\\.lake\\build\\ir\\CoAI\\DiscoveredOracles.setup.json --json",
+   "level": "trace"}],
+ "inputs":
+ [["CoAI.DiscoveredOracles:deps",
+   [["deps",
+     [["coai/CoAI:extraDep", [["@coai:extraDep", "00000000000006bb"]]],
+      ["imports",
+       [["Mathlib transitive imports (legacy)", "5c7f1983deb43cb8"],
+        ["Mathlib:importAllArts", "5d3af6df6bc8344b"]]]]],
+    ["libs",
+     [["import dynlibs", "00000000000006bb"],
+      ["package external libraries", "00000000000006bb"],
+      ["module dynlibs", "00000000000006bb"],
+      ["module plugins", "00000000000006bb"]]]]],
+  ["Lean 4.29.0, commit 985f350dcd18fc7814dfa677cac09933f44f3215",
+   "25953b0996e8f9b7"],
+  ["C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project\\CoAI\\DiscoveredOracles.lean",
+   "d40543fcb96a2809"],
+  ["options", "00000000000006bb"],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: CoAI.DiscoveredOracles", "3f4c80aa3286b767"],
+  ["Package.id?: (some coai)", "d15b25c50806f227"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "59d2d5b9c669d4e7"}

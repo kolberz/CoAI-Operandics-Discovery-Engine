@@ -1,0 +1,26 @@
+{
+  "aggressive": {
+    "attention_floor": 0.4,
+    "divergence_floor": 0.1,
+    "entropy_ceiling": 4.0,
+    "entropy_floor": 0.3,
+    "norm_ceiling": 12.0,
+    "similarity_ceiling": 0.95
+  },
+  "balanced": {
+    "attention_floor": 0.15482398897058824,
+    "divergence_floor": 0.1,
+    "entropy_ceiling": 4.0,
+    "entropy_floor": 0.3,
+    "norm_ceiling": 12.0,
+    "similarity_ceiling": 0.95
+  },
+  "conservative": {
+    "attention_floor": 0.4,
+    "divergence_floor": 1.0,
+    "entropy_ceiling": 0.8325000000000001,
+    "entropy_floor": 0.8325000000000001,
+    "norm_ceiling": 0.0,
+    "similarity_ceiling": 0.5
+  }
+}

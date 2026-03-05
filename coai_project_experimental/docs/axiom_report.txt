@@ -1,0 +1,6 @@
+=== certified_attention_contract ===
+CoAI/Export/AxiomAudit.lean:5:14: error(lean.unknownIdentifier): Unknown constant `StochasticAttention.certified_attention_contract`
+=== certified_normalized_attention_contract_strict ===
+'StochasticAttention.certified_normalized_attention_contract_strict' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,143 @@
+{
+  "schema_version": "4.0.0",
+  "timestamp": "2026-03-04T03:07:34Z",
+  "stats": {
+    "uptime": 0.009799957275390625,
+    "total_theorems": 2,
+    "completed_count": 14,
+    "unlocked_count": 1,
+    "current_max_stage": 14,
+    "stage_map": {
+      "completed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "unlocked": [
+        15
+      ],
+      "proceeding": []
+    }
+  },
+  "stages": [
+    {
+      "id": 1,
+      "name": "Stage 1",
+      "status": "COMPLETE",
+      "theorems": []
+    },
+    {
+      "id": 2,
+      "name": "Stage 2",
+      "status": "COMPLETE",
+      "theorems": []
+    },
+    {
+      "id": 3,
+      "name": "Stage 3",
+      "status": "COMPLETE",
+      "theorems": []
+    },
+    {
+      "id": 4,
+      "name": "Stage 4",
+      "status": "COMPLETE",
+      "theorems": []
+    },
+    {
+      "id": 5,
+      "name": "Stage 5",
+      "status": "COMPLETE",
+      "theorems": []
+    },
+    {
+      "id": 6,
+      "name": "Stage 6",
+      "status": "COMPLETE",
+      "theorems": []
+    },
+    {
+      "id": 7,
+      "name": "Stage 7",
+      "status": "COMPLETE",
+      "theorems": []
+    },
+    {
+      "id": 8,
+      "name": "Stage 8",
+      "status": "COMPLETE",
+      "theorems": []
+    },
+    {
+      "id": 9,
+      "name": "Stage 9",
+      "status": "COMPLETE",
+      "theorems": []
+    },
+    {
+      "id": 10,
+      "name": "Stage 10",
+      "status": "COMPLETE",
+      "theorems": []
+    },
+    {
+      "id": 11,
+      "name": "Stage 11",
+      "status": "COMPLETE",
+      "theorems": []
+    },
+    {
+      "id": 12,
+      "name": "Stage 12",
+      "status": "COMPLETE",
+      "theorems": []
+    },
+    {
+      "id": 13,
+      "name": "Stage 13",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "A = A",
+          "interestingness": 0.95,
+          "tags": [
+            "stage_13",
+            "structural"
+          ],
+          "verification": "PROVED",
+          "cycle": 0,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Stage 14",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "B = B",
+          "interestingness": 0.85,
+          "tags": [
+            "stage_14",
+            "algebra"
+          ],
+          "verification": "PROVED",
+          "cycle": 0,
+          "proof_steps": 0
+        }
+      ]
+    }
+  ]
+}

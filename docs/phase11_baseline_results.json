@@ -1,0 +1,519 @@
+{
+  "applied_rules": {},
+  "corridor_outcomes": [
+    {
+      "authorized": true,
+      "cycle": 0,
+      "min_margin": 0.004122015838325227,
+      "recovered": true,
+      "regime": "CORRIDOR",
+      "risk": 0.0,
+      "state": {
+        "attention_coherence": 0.15830781787422402,
+        "centroid_similarity": 0.5,
+        "embedding_norm": 0.0,
+        "entropy": 0.5,
+        "manifold_divergence": 1.0
+      },
+      "tightest_gate": "safety",
+      "violated_gates": []
+    },
+    {
+      "authorized": true,
+      "cycle": 1,
+      "min_margin": 0.004122015838325227,
+      "recovered": true,
+      "regime": "CORRIDOR",
+      "risk": 0.0,
+      "state": {
+        "attention_coherence": 0.15830781787422402,
+        "centroid_similarity": 0.5,
+        "embedding_norm": 0.0,
+        "entropy": 0.5,
+        "manifold_divergence": 1.0
+      },
+      "tightest_gate": "safety",
+      "violated_gates": []
+    },
+    {
+      "authorized": true,
+      "cycle": 2,
+      "min_margin": 0.004122015838325227,
+      "recovered": true,
+      "regime": "CORRIDOR",
+      "risk": 0.0,
+      "state": {
+        "attention_coherence": 0.15830781787422402,
+        "centroid_similarity": 0.5,
+        "embedding_norm": 0.0,
+        "entropy": 0.5,
+        "manifold_divergence": 1.0
+      },
+      "tightest_gate": "safety",
+      "violated_gates": []
+    },
+    {
+      "authorized": true,
+      "cycle": 3,
+      "min_margin": 0.004122015838325227,
+      "recovered": true,
+      "regime": "CORRIDOR",
+      "risk": 0.0,
+      "state": {
+        "attention_coherence": 0.15830781787422402,
+        "centroid_similarity": 0.5,
+        "embedding_norm": 0.0,
+        "entropy": 0.5,
+        "manifold_divergence": 1.0
+      },
+      "tightest_gate": "safety",
+      "violated_gates": []
+    },
+    {
+      "authorized": true,
+      "cycle": 4,
+      "min_margin": 0.004122015838325227,
+      "recovered": true,
+      "regime": "CORRIDOR",
+      "risk": 0.0,
+      "state": {
+        "attention_coherence": 0.15830781787422402,
+        "centroid_similarity": 0.5,
+        "embedding_norm": 0.0,
+        "entropy": 0.5,
+        "manifold_divergence": 1.0
+      },
+      "tightest_gate": "safety",
+      "violated_gates": []
+    },
+    {
+      "authorized": true,
+      "cycle": 5,
+      "min_margin": 0.004122015838325227,
+      "recovered": true,
+      "regime": "CORRIDOR",
+      "risk": 0.0,
+      "state": {
+        "attention_coherence": 0.15830781787422402,
+        "centroid_similarity": 0.5,
+        "embedding_norm": 0.0,
+        "entropy": 0.5,
+        "manifold_divergence": 1.0
+      },
+      "tightest_gate": "safety",
+      "violated_gates": []
+    },
+    {
+      "authorized": true,
+      "cycle": 6,
+      "min_margin": 0.004122015838325227,
+      "recovered": true,
+      "regime": "CORRIDOR",
+      "risk": 0.0,
+      "state": {
+        "attention_coherence": 0.15830781787422402,
+        "centroid_similarity": 0.5,
+        "embedding_norm": 0.0,
+        "entropy": 0.5,
+        "manifold_divergence": 1.0
+      },
+      "tightest_gate": "safety",
+      "violated_gates": []
+    },
+    {
+      "authorized": true,
+      "cycle": 7,
+      "min_margin": 0.004122015838325227,
+      "recovered": true,
+      "regime": "CORRIDOR",
+      "risk": 0.0,
+      "state": {
+        "attention_coherence": 0.15830781787422402,
+        "centroid_similarity": 0.5,
+        "embedding_norm": 0.0,
+        "entropy": 0.5,
+        "manifold_divergence": 1.0
+      },
+      "tightest_gate": "safety",
+      "violated_gates": []
+    },
+    {
+      "authorized": true,
+      "cycle": 8,
+      "min_margin": 0.004122015838325227,
+      "recovered": true,
+      "regime": "CORRIDOR",
+      "risk": 0.0,
+      "state": {
+        "attention_coherence": 0.15830781787422402,
+        "centroid_similarity": 0.5,
+        "embedding_norm": 0.0,
+        "entropy": 0.5,
+        "manifold_divergence": 1.0
+      },
+      "tightest_gate": "safety",
+      "violated_gates": []
+    },
+    {
+      "authorized": true,
+      "cycle": 9,
+      "min_margin": 0.004122015838325227,
+      "recovered": true,
+      "regime": "CORRIDOR",
+      "risk": 0.0,
+      "state": {
+        "attention_coherence": 0.15830781787422402,
+        "centroid_similarity": 0.5,
+        "embedding_norm": 0.0,
+        "entropy": 0.5,
+        "manifold_divergence": 1.0
+      },
+      "tightest_gate": "safety",
+      "violated_gates": []
+    },
+    {
+      "authorized": true,
+      "cycle": 10,
+      "min_margin": 0.004122015838325227,
+      "recovered": true,
+      "regime": "CORRIDOR",
+      "risk": 0.0,
+      "state": {
+        "attention_coherence": 0.15830781787422402,
+        "centroid_similarity": 0.5,
+        "embedding_norm": 0.0,
+        "entropy": 0.5,
+        "manifold_divergence": 1.0
+      },
+      "tightest_gate": "safety",
+      "violated_gates": []
+    },
+    {
+      "authorized": true,
+      "cycle": 11,
+      "min_margin": 0.004122015838325227,
+      "recovered": true,
+      "regime": "CORRIDOR",
+      "risk": 0.0,
+      "state": {
+        "attention_coherence": 0.15830781787422402,
+        "centroid_similarity": 0.5,
+        "embedding_norm": 0.0,
+        "entropy": 0.5,
+        "manifold_divergence": 1.0
+      },
+      "tightest_gate": "safety",
+      "violated_gates": []
+    },
+    {
+      "authorized": true,
+      "cycle": 12,
+      "min_margin": 0.004122015838325227,
+      "recovered": true,
+      "regime": "CORRIDOR",
+      "risk": 0.0,
+      "state": {
+        "attention_coherence": 0.15830781787422402,
+        "centroid_similarity": 0.5,
+        "embedding_norm": 0.0,
+        "entropy": 0.5,
+        "manifold_divergence": 1.0
+      },
+      "tightest_gate": "safety",
+      "violated_gates": []
+    },
+    {
+      "authorized": true,
+      "cycle": 13,
+      "min_margin": 0.004122015838325227,
+      "recovered": true,
+      "regime": "CORRIDOR",
+      "risk": 0.0,
+      "state": {
+        "attention_coherence": 0.15830781787422402,
+        "centroid_similarity": 0.5,
+        "embedding_norm": 0.0,
+        "entropy": 0.5,
+        "manifold_divergence": 1.0
+      },
+      "tightest_gate": "safety",
+      "violated_gates": []
+    },
+    {
+      "authorized": true,
+      "cycle": 14,
+      "min_margin": 0.004122015838325227,
+      "recovered": true,
+      "regime": "CORRIDOR",
+      "risk": 0.0,
+      "state": {
+        "attention_coherence": 0.15830781787422402,
+        "centroid_similarity": 0.5,
+        "embedding_norm": 0.0,
+        "entropy": 0.5,
+        "manifold_divergence": 1.0
+      },
+      "tightest_gate": "safety",
+      "violated_gates": []
+    },
+    {
+      "authorized": true,
+      "cycle": 15,
+      "min_margin": 0.004122015838325227,
+      "recovered": true,
+      "regime": "CORRIDOR",
+      "risk": 0.0,
+      "state": {
+        "attention_coherence": 0.15830781787422402,
+        "centroid_similarity": 0.5,
+        "embedding_norm": 0.0,
+        "entropy": 0.5,
+        "manifold_divergence": 1.0
+      },
+      "tightest_gate": "safety",
+      "violated_gates": []
+    },
+    {
+      "authorized": true,
+      "cycle": 16,
+      "min_margin": 0.004122015838325227,
+      "recovered": true,
+      "regime": "CORRIDOR",
+      "risk": 0.0,
+      "state": {
+        "attention_coherence": 0.15830781787422402,
+        "centroid_similarity": 0.5,
+        "embedding_norm": 0.0,
+        "entropy": 0.5,
+        "manifold_divergence": 1.0
+      },
+      "tightest_gate": "safety",
+      "violated_gates": []
+    },
+    {
+      "authorized": true,
+      "cycle": 17,
+      "min_margin": 0.004122015838325227,
+      "recovered": true,
+      "regime": "CORRIDOR",
+      "risk": 0.0,
+      "state": {
+        "attention_coherence": 0.15830781787422402,
+        "centroid_similarity": 0.5,
+        "embedding_norm": 0.0,
+        "entropy": 0.5,
+        "manifold_divergence": 1.0
+      },
+      "tightest_gate": "safety",
+      "violated_gates": []
+    },
+    {
+      "authorized": true,
+      "cycle": 18,
+      "min_margin": 0.004122015838325227,
+      "recovered": true,
+      "regime": "CORRIDOR",
+      "risk": 0.0,
+      "state": {
+        "attention_coherence": 0.15830781787422402,
+        "centroid_similarity": 0.5,
+        "embedding_norm": 0.0,
+        "entropy": 0.5,
+        "manifold_divergence": 1.0
+      },
+      "tightest_gate": "safety",
+      "violated_gates": []
+    },
+    {
+      "authorized": true,
+      "cycle": 19,
+      "min_margin": 0.004122015838325227,
+      "recovered": true,
+      "regime": "CORRIDOR",
+      "risk": 0.0,
+      "state": {
+        "attention_coherence": 0.15830781787422402,
+        "centroid_similarity": 0.5,
+        "embedding_norm": 0.0,
+        "entropy": 0.5,
+        "manifold_divergence": 1.0
+      },
+      "tightest_gate": "safety",
+      "violated_gates": []
+    },
+    {
+      "authorized": true,
+      "cycle": 20,
+      "min_margin": 0.004122015838325227,
+      "recovered": true,
+      "regime": "CORRIDOR",
+      "risk": 0.0,
+      "state": {
+        "attention_coherence": 0.15830781787422402,
+        "centroid_similarity": 0.5,
+        "embedding_norm": 0.0,
+        "entropy": 0.5,
+        "manifold_divergence": 1.0
+      },
+      "tightest_gate": "safety",
+      "violated_gates": []
+    },
+    {
+      "authorized": true,
+      "cycle": 21,
+      "min_margin": 0.004122015838325227,
+      "recovered": true,
+      "regime": "CORRIDOR",
+      "risk": 0.0,
+      "state": {
+        "attention_coherence": 0.15830781787422402,
+        "centroid_similarity": 0.5,
+        "embedding_norm": 0.0,
+        "entropy": 0.5,
+        "manifold_divergence": 1.0
+      },
+      "tightest_gate": "safety",
+      "violated_gates": []
+    },
+    {
+      "authorized": true,
+      "cycle": 22,
+      "min_margin": 0.004122015838325227,
+      "recovered": true,
+      "regime": "CORRIDOR",
+      "risk": 0.0,
+      "state": {
+        "attention_coherence": 0.15830781787422402,
+        "centroid_similarity": 0.5,
+        "embedding_norm": 0.0,
+        "entropy": 0.5,
+        "manifold_divergence": 1.0
+      },
+      "tightest_gate": "safety",
+      "violated_gates": []
+    },
+    {
+      "authorized": true,
+      "cycle": 23,
+      "min_margin": 0.004122015838325227,
+      "recovered": true,
+      "regime": "CORRIDOR",
+      "risk": 0.0,
+      "state": {
+        "attention_coherence": 0.15830781787422402,
+        "centroid_similarity": 0.5,
+        "embedding_norm": 0.0,
+        "entropy": 0.5,
+        "manifold_divergence": 1.0
+      },
+      "tightest_gate": "safety",
+      "violated_gates": []
+    },
+    {
+      "authorized": true,
+      "cycle": 24,
+      "min_margin": 0.004122015838325227,
+      "recovered": true,
+      "regime": "CORRIDOR",
+      "risk": 0.0,
+      "state": {
+        "attention_coherence": 0.15830781787422402,
+        "centroid_similarity": 0.5,
+        "embedding_norm": 0.0,
+        "entropy": 0.5,
+        "manifold_divergence": 1.0
+      },
+      "tightest_gate": "safety",
+      "violated_gates": []
+    },
+    {
+      "authorized": true,
+      "cycle": 25,
+      "min_margin": 0.004122015838325227,
+      "recovered": true,
+      "regime": "CORRIDOR",
+      "risk": 0.0,
+      "state": {
+        "attention_coherence": 0.15830781787422402,
+        "centroid_similarity": 0.5,
+        "embedding_norm": 0.0,
+        "entropy": 0.5,
+        "manifold_divergence": 1.0
+      },
+      "tightest_gate": "safety",
+      "violated_gates": []
+    },
+    {
+      "authorized": true,
+      "cycle": 26,
+      "min_margin": 0.004122015838325227,
+      "recovered": true,
+      "regime": "CORRIDOR",
+      "risk": 0.0,
+      "state": {
+        "attention_coherence": 0.15830781787422402,
+        "centroid_similarity": 0.5,
+        "embedding_norm": 0.0,
+        "entropy": 0.5,
+        "manifold_divergence": 1.0
+      },
+      "tightest_gate": "safety",
+      "violated_gates": []
+    },
+    {
+      "authorized": true,
+      "cycle": 27,
+      "min_margin": 0.004122015838325227,
+      "recovered": true,
+      "regime": "CORRIDOR",
+      "risk": 0.0,
+      "state": {
+        "attention_coherence": 0.15830781787422402,
+        "centroid_similarity": 0.5,
+        "embedding_norm": 0.0,
+        "entropy": 0.5,
+        "manifold_divergence": 1.0
+      },
+      "tightest_gate": "safety",
+      "violated_gates": []
+    },
+    {
+      "authorized": true,
+      "cycle": 28,
+      "min_margin": 0.004122015838325227,
+      "recovered": true,
+      "regime": "CORRIDOR",
+      "risk": 0.0,
+      "state": {
+        "attention_coherence": 0.15830781787422402,
+        "centroid_similarity": 0.5,
+        "embedding_norm": 0.0,
+        "entropy": 0.5,
+        "manifold_divergence": 1.0
+      },
+      "tightest_gate": "safety",
+      "violated_gates": []
+    },
+    {
+      "authorized": true,
+      "cycle": 29,
+      "min_margin": 0.004122015838325227,
+      "recovered": true,
+      "regime": "CORRIDOR",
+      "risk": 0.0,
+      "state": {
+        "attention_coherence": 0.15830781787422402,
+        "centroid_similarity": 0.5,
+        "embedding_norm": 0.0,
+        "entropy": 0.5,
+        "manifold_divergence": 1.0
+      },
+      "tightest_gate": "safety",
+      "violated_gates": []
+    }
+  ],
+  "duration_seconds": 228.49458527565002,
+  "redundant_skipped": 0,
+  "theorems_proved": 0,
+  "total_cycles": 0
+}

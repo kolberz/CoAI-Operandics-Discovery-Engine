@@ -1,0 +1,30 @@
+Exit code: 1
+STDOUT:
+BEGIN StochasticAttention.attnKernel_factorize
+StochasticAttention.attnKernel_factorize.{u_2, u_3, u_4, u_5} {N : Type u_2} {D : Type u_3} {R : Type u_4}
+  {Dv : Type u_5} [Fintype N] [Fintype D] [Fintype R] [Fintype Dv] [DecidableEq N] [DecidableEq D] [DecidableEq R]
+  [DecidableEq Dv] (ΦQ ΦK : Matrix N D ℝ → Matrix N R ℝ) (Q K : Matrix N D ℝ) (V : Matrix N Dv ℝ) :
+  StochasticAttention.AttnKernelQuad ΦQ ΦK Q K V = StochasticAttention.AttnKernelLin ΦQ ΦK Q K V
+'StochasticAttention.attnKernel_factorize' depends on axioms: [propext, Classical.choice, Quot.sound]
+END StochasticAttention.attnKernel_factorize
+BEGIN StochasticAttention.certified_attention_contract
+C:\Users\admin\OneDrive\Desktop\CoAI Operandics Discovery Engine\coai_project_experimental\CoAI\Export\Manifest.lean:20:7: error(lean.unknownIdentifier): Unknown identifier `StochasticAttention.certified_attention_contract`
+C:\Users\admin\OneDrive\Desktop\CoAI Operandics Discovery Engine\coai_project_experimental\CoAI\Export\Manifest.lean:21:14: error(lean.unknownIdentifier): Unknown constant `StochasticAttention.certified_attention_contract`
+END StochasticAttention.certified_attention_contract
+BEGIN StochasticAttention.certified_normalized_attention_contract_strict
+StochasticAttention.certified_normalized_attention_contract_strict.{u_5, u_6, u_7, u_8} {Ω : Type u_5}
+  [MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume] {E : Type u_6}
+  [NormedAddCommGroup E] [InnerProductSpace ℝ E] {ι : Type u_7} [Fintype ι] (m : ℕ) (ω : Ω → Fin m → E) {V : Type u_8}
+  [NormedAddCommGroup V] [NormedSpace ℝ V] (q : E) (keys : ι → E) (η δ0 τ : ℝ) (err : Ω → V)
+  (h_det : ∀ s ∈ StochasticAttention.goodEvent m ω q keys η, ‖err s‖ ≤ τ)
+  (h_tail :
+    ∀ (j : ι), (MeasureTheory.volume {s | η ≤ |StochasticAttention.KernelError_m m ω q (keys j) s|}).toReal ≤ δ0) :
+  (MeasureTheory.volume {s | τ < ‖err s‖}).toReal ≤ ↑(Fintype.card ι) * δ0
+'StochasticAttention.certified_normalized_attention_contract_strict' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+END StochasticAttention.certified_normalized_attention_contract_strict
+
+STDERR:
+warning: mathlib: repository 'C:\Users\admin\OneDrive\Desktop\CoAI Operandics Discovery Engine\coai_project_experimental\.lake/packages\mathlib' has local changes
+warning: batteries: repository 'C:\Users\admin\OneDrive\Desktop\CoAI Operandics Discovery Engine\coai_project_experimental\.lake/packages\batteries' has local changes

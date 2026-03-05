@@ -1,0 +1,63 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["0e1ab0bc37d765de.olean"],
+  "i": "aa635789ecd24b58.ilean",
+  "c": "0ae24ee37f97f345.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project_experimental\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project_experimental\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project_experimental\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean;C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project_experimental\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project_experimental\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project_experimental\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project_experimental\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project_experimental\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project_experimental\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project_experimental\\.lake\\build\\lib\\lean c:\\Users\\admin\\.elan\\toolchains\\leanprover--lean4---v4.29.0-rc1\\bin\\lean.exe C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project_experimental\\CoAI\\Concentration.lean -o C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project_experimental\\.lake\\build\\lib\\lean\\CoAI\\Concentration.olean -i C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project_experimental\\.lake\\build\\lib\\lean\\CoAI\\Concentration.ilean -c C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project_experimental\\.lake\\build\\ir\\CoAI\\Concentration.c --setup C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project_experimental\\.lake\\build\\ir\\CoAI\\Concentration.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "CoAI/Concentration.lean:80:41: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`",
+   "level": "warning"},
+  {"message":
+   "CoAI/Concentration.lean:89:16: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`",
+   "level": "warning"},
+  {"message":
+   "CoAI/Concentration.lean:91:16: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`",
+   "level": "warning"},
+  {"message":
+   "CoAI/Concentration.lean:100:14: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`",
+   "level": "warning"},
+  {"message":
+   "CoAI/Concentration.lean:134:0: automatically included section variable(s) unused in theorem `StochasticAttention.favor_bound_delta`:\n  [IsProbabilityMeasure ℙ]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [IsProbabilityMeasure ℙ] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "CoAI/Concentration.lean:135:13: unused variable `hm`\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+   "level": "warning"},
+  {"message":
+   "CoAI/Concentration.lean:136:13: unused variable `hε`\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+   "level": "warning"}],
+ "inputs":
+ [["CoAI.Concentration:deps",
+   [["deps",
+     [["coai/CoAI:extraDep", [["@coai:extraDep", "00000000000006bb"]]],
+      ["imports",
+       [["Mathlib.MeasureTheory.Integral.Bochner.Basic transitive imports (legacy)",
+         "8644462c010bcd4c"],
+        ["Mathlib.MeasureTheory.Integral.Bochner.Basic:importAllArts",
+         "57aa0f6f6ba047be"],
+        ["Mathlib.Tactic.Positivity transitive imports (legacy)",
+         "c8e2a7b8b988bc3c"],
+        ["Mathlib.Tactic.Positivity:importAllArts", "47b576a8511f563d"],
+        ["CoAI.FAVOR transitive imports (legacy)", "1a1652a85ea4d249"],
+        ["CoAI.FAVOR:importAllArts", "84b3b20a73c7b76e"],
+        ["CoAI.FavorSubGaussian transitive imports (legacy)",
+         "b799d7cde5722c84"],
+        ["CoAI.FavorSubGaussian:importAllArts", "de706ba6c7b16361"]]]]],
+    ["libs",
+     [["import dynlibs", "00000000000006bb"],
+      ["package external libraries", "00000000000006bb"],
+      ["module dynlibs", "00000000000006bb"],
+      ["module plugins", "00000000000006bb"]]]]],
+  ["Lean 4.29.0, commit 985f350dcd18fc7814dfa677cac09933f44f3215",
+   "25953b0996e8f9b7"],
+  ["C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project_experimental\\CoAI\\Concentration.lean",
+   "68842693175615ae"],
+  ["options", "00000000000006bb"],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: CoAI.Concentration", "61d81b531b7fdff0"],
+  ["Package.id?: (some coai)", "d15b25c50806f227"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "ab9852ab9772bda7"}

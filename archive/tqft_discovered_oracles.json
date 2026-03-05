@@ -1,0 +1,60 @@
+{
+  "schema_version": "2.0.0",
+  "project": "CoAI-TQFT-Auto",
+  "tranche": "Chern-Simons-Terminal-State",
+  "metadata": {
+    "beta_burn": 68450.0,
+    "zk_audit_passed": true
+  },
+  "rules": [
+    {
+      "id": "tqft_thm_cycle0_0",
+      "pattern": "Surgery(Twist(Unknot)) = S3_Sphere",
+      "tags": [
+        "TQFT",
+        "Kirby-Calculus"
+      ],
+      "lean": {
+        "axioms": [
+          "TQFT.3D.Surgery"
+        ],
+        "verified": true,
+        "zk_proof": "d155dbfdfacf99f75439ce2076de69685bc87164bd3713e8becb39e9a58eb9f2",
+        "interestingness": 0.5
+      }
+    },
+    {
+      "id": "tqft_thm_cycle3_1",
+      "pattern": "Invariant(Lens_Space_L2_1) = Quantum_Int(Multiply_Scalar(q, Multiply_Scalar(q, Add(q, q_inv))))",
+      "tags": [
+        "TQFT",
+        "Chern-Simons",
+        "Lens-Space"
+      ],
+      "lean": {
+        "axioms": [
+          "TQFT.3D.Surgery"
+        ],
+        "verified": true,
+        "zk_proof": "cdb61ef315e1f1b92f3e2a314edff29c2bb79d22fa97b4366cf2b4588eed7b3a",
+        "interestingness": 0.99
+      }
+    },
+    {
+      "id": "tqft_thm_cycle5_2",
+      "pattern": "Multiply_Scalar(Quantum_Int(Multiply_Scalar(Invariant(S3_Sphere), Quantum_Int(Identity_Scalar))), Identity_Scalar) = Invariant(S3_Sphere)",
+      "tags": [
+        "TQFT",
+        "Kirby-Calculus"
+      ],
+      "lean": {
+        "axioms": [
+          "TQFT.3D.Surgery"
+        ],
+        "verified": true,
+        "zk_proof": "17f8e42dbcaabaab23ffdd454ac60b446605a80fc04eb42bb53272b8a71a8dfc",
+        "interestingness": 0.7
+      }
+    }
+  ]
+}

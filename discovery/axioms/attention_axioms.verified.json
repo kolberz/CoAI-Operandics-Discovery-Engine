@@ -1,0 +1,297 @@
+{
+  "bundle": "attention",
+  "rules": [
+    {
+      "direction": "both",
+      "engine": {
+        "sexpr": [
+          "Forall",
+          "Q",
+          [
+            "Forall",
+            "K",
+            [
+              "Forall",
+              "V",
+              [
+                "Equality",
+                [
+                  "Compose",
+                  [
+                    "phi",
+                    "Q"
+                  ],
+                  [
+                    "Compose",
+                    [
+                      "Transpose",
+                      [
+                        "phi",
+                        "K"
+                      ]
+                    ],
+                    "V"
+                  ]
+                ],
+                [
+                  "Attn",
+                  "Q",
+                  "K",
+                  "V"
+                ]
+              ]
+            ]
+          ]
+        ]
+      },
+      "id": "linear_attention_associativity",
+      "kind": "rewrite",
+      "lean": {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "category": "algebra",
+        "theorem": "StochasticAttention.attnKernel_factorize",
+        "type": "Type u_2} {D : Type u_3} {R : Type u_4}"
+      },
+      "vars": {
+        "K": "MODULE",
+        "Q": "MODULE",
+        "V": "MODULE"
+      }
+    },
+    {
+      "direction": "both",
+      "engine": {
+        "sexpr": [
+          "Forall",
+          "A",
+          [
+            "Forall",
+            "B",
+            [
+              "Forall",
+              "C",
+              [
+                "Equality",
+                [
+                  "Compose",
+                  [
+                    "Compose",
+                    "A",
+                    "B"
+                  ],
+                  "C"
+                ],
+                [
+                  "Compose",
+                  "A",
+                  [
+                    "Compose",
+                    "B",
+                    "C"
+                  ]
+                ]
+              ]
+            ]
+          ]
+        ]
+      },
+      "id": "compose_associativity",
+      "kind": "rewrite",
+      "lean": {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "category": "algebra",
+        "theorem": "Matrix.mul_assoc",
+        "type": "Type u_1} {m : Type u_2} {n : Type u_3} {o : Type u_4} {\u03b1 : Type v}"
+      },
+      "vars": {
+        "A": "MODULE",
+        "B": "MODULE",
+        "C": "MODULE"
+      }
+    },
+    {
+      "direction": "both",
+      "engine": {
+        "sexpr": [
+          "Forall",
+          "A",
+          [
+            "Equality",
+            [
+              "Transpose",
+              [
+                "Transpose",
+                "A"
+              ]
+            ],
+            "A"
+          ]
+        ]
+      },
+      "id": "transpose_involutive",
+      "kind": "rewrite",
+      "lean": {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "category": "algebra",
+        "theorem": "Matrix.transpose_transpose",
+        "type": "Type u_2} {n : Type u_3} {\u03b1 : Type v} (M : Matrix m n \u03b1) :"
+      },
+      "vars": {
+        "A": "MODULE"
+      }
+    },
+    {
+      "direction": "both",
+      "engine": {
+        "sexpr": [
+          "Forall",
+          "A",
+          [
+            "Forall",
+            "B",
+            [
+              "Equality",
+              [
+                "Transpose",
+                [
+                  "Compose",
+                  "A",
+                  "B"
+                ]
+              ],
+              [
+                "Compose",
+                [
+                  "Transpose",
+                  "B"
+                ],
+                [
+                  "Transpose",
+                  "A"
+                ]
+              ]
+            ]
+          ]
+        ]
+      },
+      "id": "transpose_compose",
+      "kind": "rewrite",
+      "lean": {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "category": "algebra",
+        "theorem": "Matrix.transpose_mul",
+        "type": "Type u_1} {m : Type u_2} {n : Type u_3} {\u03b1 : Type v} [AddCommMonoid \u03b1]"
+      },
+      "vars": {
+        "A": "MODULE",
+        "B": "MODULE"
+      }
+    },
+    {
+      "direction": "both",
+      "engine": {
+        "sexpr": [
+          "Forall",
+          "A",
+          [
+            "Equality",
+            [
+              "Compose",
+              "ID_M",
+              "A"
+            ],
+            "A"
+          ]
+        ]
+      },
+      "id": "compose_id_left",
+      "kind": "rewrite",
+      "lean": {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "category": "algebra",
+        "theorem": "Matrix.one_mul",
+        "type": "Type u_2} {n : Type u_3} {\u03b1 : Type v} [NonAssocSemiring \u03b1] [Fintype m] [DecidableEq m]"
+      },
+      "vars": {
+        "A": "MODULE"
+      }
+    },
+    {
+      "direction": "both",
+      "engine": {
+        "sexpr": [
+          "Forall",
+          "A",
+          [
+            "Equality",
+            [
+              "Compose",
+              "A",
+              "ID_M"
+            ],
+            "A"
+          ]
+        ]
+      },
+      "id": "compose_id_right",
+      "kind": "rewrite",
+      "lean": {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "category": "algebra",
+        "theorem": "Matrix.mul_one",
+        "type": "Type u_2} {n : Type u_3} {\u03b1 : Type v} [NonAssocSemiring \u03b1] [Fintype n] [DecidableEq n]"
+      },
+      "vars": {
+        "A": "MODULE"
+      }
+    },
+    {
+      "direction": "both",
+      "engine": {
+        "sexpr": [
+          "Equality",
+          [
+            "Transpose",
+            "ID_M"
+          ],
+          "ID_M"
+        ]
+      },
+      "id": "transpose_one",
+      "kind": "rewrite",
+      "lean": {
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "category": "algebra",
+        "theorem": "Matrix.transpose_one",
+        "type": "Type u_3} {\u03b1 : Type v} [DecidableEq n] [Zero \u03b1] [One \u03b1] : Matrix.transpose 1 = 1"
+      },
+      "vars": {}
+    }
+  ],
+  "schema_version": 1
+}

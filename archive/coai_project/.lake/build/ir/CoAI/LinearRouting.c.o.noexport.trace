@@ -1,0 +1,18 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs": "8b72b23e073c7aa5.o",
+ "log":
+ [{"message":
+   ".> c:\\Users\\admin\\.elan\\toolchains\\leanprover--lean4---v4.29.0-rc1\\bin\\clang.exe -c -o C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project\\.lake\\build\\ir\\CoAI\\LinearRouting.c.o.noexport C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project\\.lake\\build\\ir\\CoAI\\LinearRouting.c -I c:\\Users\\admin\\.elan\\toolchains\\leanprover--lean4---v4.29.0-rc1\\include -fstack-clash-protection -fdata-sections -ffunction-sections -Wno-unused-command-line-argument --sysroot c:\\Users\\admin\\.elan\\toolchains\\leanprover--lean4---v4.29.0-rc1 -nostdinc -isystem c:\\Users\\admin\\.elan\\toolchains\\leanprover--lean4---v4.29.0-rc1/include/clang -O3 -DNDEBUG",
+   "level": "trace"}],
+ "inputs":
+ [["CoAI.LinearRouting:c",
+   [["C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project\\.lake\\build\\ir\\CoAI\\LinearRouting.c",
+     "44483128b884ec85"],
+    ["Lean 4.29.0, commit 985f350dcd18fc7814dfa677cac09933f44f3215",
+     "25953b0996e8f9b7"]]],
+  ["Lean 4.29.0, commit 985f350dcd18fc7814dfa677cac09933f44f3215",
+   "25953b0996e8f9b7"],
+  ["traceArgs: #[-O3, -DNDEBUG]", "6c7bb0eeabd8f74a"],
+  ["x86_64-w64-windows-gnu", "360db333d006d911"]],
+ "depHash": "a5c82a6799351f2f"}

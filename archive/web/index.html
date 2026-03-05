@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CoAI Gate 3 — Physical Units Checker</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 24px; max-width: 1100px; }
+    h1 { margin-bottom: 8px; }
+    .muted { color: #555; }
+    .row { display: flex; gap: 16px; flex-wrap: wrap; }
+    .card { border: 1px solid #ddd; border-radius: 10px; padding: 14px; flex: 1; min-width: 320px; }
+    textarea, input, select { width: 100%; box-sizing: border-box; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    textarea { min-height: 220px; }
+    pre { background: #0b1020; color: #e6e6e6; padding: 12px; border-radius: 10px; overflow:auto; }
+    button { padding: 10px 14px; border-radius: 10px; border: 1px solid #aaa; background: #f5f5f5; cursor: pointer; }
+    button:hover { background: #eee; }
+    .ok { color: #0a7b2b; font-weight: 700; }
+    .warn { color: #a15c00; font-weight: 700; }
+    .bad { color: #b00020; font-weight: 700; }
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    code { background: #f3f3f3; padding: 1px 5px; border-radius: 5px; }
+    details summary { cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>CoAI Gate 3 — Physical Units (Dimensional Consistency)</h1>
+  <p class="muted">
+    Gate 3 checks that each equation is dimensionally meaningful (e.g., prevents <code>J ≤ bit</code>).
+    It does not prove a claim is true; it proves the units are consistent and obligations are checkable.
+  </p>
+
+  <div class="row">
+    <div class="card">
+      <h2>1) Select Mode</h2>
+      <div class="grid2">
+        <div>
+          <label>Run mode</label>
+          <select id="mode">
+            <option value="oneoff">One-off Gate 3 check (your axioms only)</option>
+            <option value="engine">Engine axiom set (+ optional extra axioms)</option>
+          </select>
+        </div>
+        <div>
+          <label>Coverage sample size</label>
+          <input id="sampleN" type="number" min="0" max="50" value="10" />
+        </div>
+      </div>
+
+      <h2 style="margin-top:14px;">2) Enter Axioms (S-expressions)</h2>
+      <p class="muted">
+        One axiom per line. Supported forms include <code>forall</code>, <code>=</code>, <code>&lt;=</code>, <code>implies</code>, <code>and</code>, <code>or</code>, <code>not</code>.
+      </p>
+      <textarea id="axioms"></textarea>
+
+      <details style="margin-top:10px;">
+        <summary>Show examples</summary>
+        <pre id="examples"></pre>
+      </details>
+
+      <div style="display:flex; gap:10px; margin-top:12px;">
+        <button id="btnCheck">Run Gate 3</button>
+        <button id="btnLoadDefaults">Load default registry</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>3) Optional Registry Overrides</h2>
+      <p class="muted">
+        Add/override constant dimensions and measured function output dimensions. (Unregistered constants in obligations may cause UNKNOWN/FAIL.)
+      </p>
+
+      <h3>Constants (JSON object)</h3>
+      <p class="muted">Example: <code>{"MY_CONST":"J","LANDAUER":"J/bit","ZERO_bit":"bit"}</code></p>
+      <textarea id="constOverrides" style="min-height:120px;"></textarea>
+
+      <h3>Measured Functions (JSON object)</h3>
+      <p class="muted">Only for functions with fixed output units (e.g., ResourceCost, Comp, Ent, Risk).</p>
+      <textarea id="funcOverrides" style="min-height:120px;"></textarea>
+
+      <details style="margin-top:10px;">
+        <summary>Allowed dimension strings</summary>
+        <pre>
+"dimensionless"
+"J"
+"s"
+"bit"
+"J/bit"
+        </pre>
+      </details>
+
+      <h2 style="margin-top:14px;">4) Results</h2>
+      <div id="verdictLine"></div>
+      <pre id="resultJson">{}</pre>
+    </div>
+  </div>
+
+<script>
+const examples = `; Landauer bridge (typical)
+(forall (M1 MODULE)
+  (implies
+    (= (Risk M1) R_ZERO)
+    (<= (ResourceCost M1) (times (Comp M1) LANDAUER))
+  )
+)
+
+; Additive identity (dimensionless)
+(forall (R1 REAL) (= (plus R1 R_ZERO) R1))
+
+; BAD example: mixed units (should FAIL if used in obligation context)
+; (= (plus (ResourceCost M1) (Comp M1)) X)
+`;
+
+document.getElementById("examples").textContent = examples;
+
+function setVerdict(v) {
+  const el = document.getElementById("verdictLine");
+  if (!v) { el.innerHTML = ""; return; }
+  let cls = (v === "PASS") ? "ok" : (v === "UNKNOWN") ? "warn" : "bad";
+  el.innerHTML = `Verdict: <span class="${cls}">${v}</span>`;
+}
+
+async function loadDefaults() {
+  const r = await fetch("/api/gate3/defaults");
+  const j = await r.json();
+  document.getElementById("constOverrides").value = JSON.stringify(j.const_dims, null, 2);
+  document.getElementById("funcOverrides").value = JSON.stringify(j.output_dims, null, 2);
+}
+
+document.getElementById("btnLoadDefaults").addEventListener("click", loadDefaults);
+
+document.getElementById("btnCheck").addEventListener("click", async () => {
+  const mode = document.getElementById("mode").value;
+  const sampleN = parseInt(document.getElementById("sampleN").value || "10", 10);
+
+  let constOverrides = {};
+  let funcOverrides = {};
+  try {
+    constOverrides = document.getElementById("constOverrides").value.trim()
+      ? JSON.parse(document.getElementById("constOverrides").value)
+      : {};
+    funcOverrides = document.getElementById("funcOverrides").value.trim()
+      ? JSON.parse(document.getElementById("funcOverrides").value)
+      : {};
+  } catch (e) {
+    alert("Registry overrides must be valid JSON.");
+    return;
+  }
+
+  const payload = {
+    mode,
+    axioms_text: document.getElementById("axioms").value,
+    const_overrides: constOverrides,
+    func_overrides: funcOverrides,
+    coverage_sample_n: sampleN
+  };
+
+  const r = await fetch("/api/gate3/check", {
+    method: "POST",
+    headers: {"Content-Type":"application/json"},
+    body: JSON.stringify(payload)
+  });
+
+  const j = await r.json();
+  setVerdict(j.verdict);
+  document.getElementById("resultJson").textContent = JSON.stringify(j, null, 2);
+});
+
+// prefill a helpful default
+document.getElementById("axioms").value =
+`(forall (M1 MODULE)
+  (<= (ResourceCost M1) (times (Comp M1) LANDAUER))
+)`;
+
+</script>
+</body>
+</html>

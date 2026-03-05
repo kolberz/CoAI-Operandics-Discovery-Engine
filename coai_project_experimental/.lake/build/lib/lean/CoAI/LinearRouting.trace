@@ -1,0 +1,42 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["809b8df0c4a90efb.olean"],
+  "i": "0eeb03c438096e53.ilean",
+  "c": "44483128b884ec85.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project_experimental\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project_experimental\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project_experimental\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean;C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project_experimental\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project_experimental\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project_experimental\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project_experimental\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project_experimental\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project_experimental\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project_experimental\\.lake\\build\\lib\\lean c:\\Users\\admin\\.elan\\toolchains\\leanprover--lean4---v4.29.0-rc1\\bin\\lean.exe C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project_experimental\\CoAI\\LinearRouting.lean -o C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project_experimental\\.lake\\build\\lib\\lean\\CoAI\\LinearRouting.olean -i C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project_experimental\\.lake\\build\\lib\\lean\\CoAI\\LinearRouting.ilean -c C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project_experimental\\.lake\\build\\ir\\CoAI\\LinearRouting.c --setup C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project_experimental\\.lake\\build\\ir\\CoAI\\LinearRouting.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "CoAI/LinearRouting.lean:28:0: automatically included section variable(s) unused in theorem `KernelAttention.attnKernel_factorize`:\n  [Fintype D]\n  [Fintype Dv]\n  [DecidableEq N]\n  [DecidableEq D]\n  [DecidableEq R]\n  [DecidableEq Dv]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Fintype D] [Fintype Dv] [DecidableEq N] [DecidableEq D] [DecidableEq R] [DecidableEq Dv] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "CoAI/LinearRouting.lean:44:0: automatically included section variable(s) unused in theorem `KernelAttention.outerN_eq_transpose_mul`:\n  [Fintype R]\n  [Fintype Dv]\n  [DecidableEq N]\n  [DecidableEq R]\n  [DecidableEq Dv]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Fintype R] [Fintype Dv] [DecidableEq N] [DecidableEq R] [DecidableEq Dv] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "CoAI/LinearRouting.lean:59:0: automatically included section variable(s) unused in theorem `KernelAttention.attnKernel_normalized_factorize`:\n  [Fintype D]\n  [Fintype Dv]\n  [DecidableEq N]\n  [DecidableEq D]\n  [DecidableEq R]\n  [DecidableEq Dv]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Fintype D] [Fintype Dv] [DecidableEq N] [DecidableEq D] [DecidableEq R] [DecidableEq Dv] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"}],
+ "inputs":
+ [["CoAI.LinearRouting:deps",
+   [["deps",
+     [["coai/CoAI:extraDep", [["@coai:extraDep", "00000000000006bb"]]],
+      ["imports",
+       [["Mathlib.Data.Matrix.Basic transitive imports (legacy)",
+         "9033b53197c11ce0"],
+        ["Mathlib.Data.Matrix.Basic:importAllArts", "bf7e6c8fa6d6be52"]]]]],
+    ["libs",
+     [["import dynlibs", "00000000000006bb"],
+      ["package external libraries", "00000000000006bb"],
+      ["module dynlibs", "00000000000006bb"],
+      ["module plugins", "00000000000006bb"]]]]],
+  ["Lean 4.29.0, commit 985f350dcd18fc7814dfa677cac09933f44f3215",
+   "25953b0996e8f9b7"],
+  ["C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\coai_project_experimental\\CoAI\\LinearRouting.lean",
+   "04e9f8225307dc10"],
+  ["options", "00000000000006bb"],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: CoAI.LinearRouting", "d8c012e59f3d3fde"],
+  ["Package.id?: (some coai)", "d15b25c50806f227"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "ea2236243ce00eaf"}

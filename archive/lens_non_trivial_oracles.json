@@ -1,0 +1,25 @@
+{
+  "domain": "Chern-Simons_3D_NonTrivial",
+  "phase": "Lens_Space_Discovery",
+  "timestamp": 1772642521.1347814,
+  "verified_oracles": [
+    {
+      "identity": "Invariant(Lens_Space_L1_1) = Quantum_Int(Multiply_Scalar(q, Add(q, q_inv)))",
+      "score": 0.99,
+      "zk_proof": "81a884cc3ae9175ceb59ee2aa9f57ebbbfb043fa6b21f1664711f622e3fbd2ce",
+      "cycle": 2
+    },
+    {
+      "identity": "Invariant(Lens_Space_L2_1) = Quantum_Int(Multiply_Scalar(q, Multiply_Scalar(q, Add(q, q_inv))))",
+      "score": 0.99,
+      "zk_proof": "cdb61ef315e1f1b92f3e2a314edff29c2bb79d22fa97b4366cf2b4588eed7b3a",
+      "cycle": 5
+    },
+    {
+      "identity": "Invariant(Lens_Space_L3_1) = Quantum_Int(Multiply_Scalar(q, Multiply_Scalar(q, Multiply_Scalar(q, Add(q, q_inv)))))",
+      "score": 0.99,
+      "zk_proof": "a36479e1cb945316405740be14e63e3a5afdfc538a59ae80136b258252e62558",
+      "cycle": 8
+    }
+  ]
+}

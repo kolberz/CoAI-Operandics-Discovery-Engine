@@ -1,0 +1,32 @@
+[
+    {
+        "id": "linear_attention_associativity",
+        "formula": "Compose(Phi(Q), Compose(Transpose(Phi(K)), V)) = Compose(Compose(Phi(Q), Transpose(Phi(K))), V)",
+        "interestingness": 0.69,
+        "status": "PROVED_ZK",
+        "tags": [
+            "Attention-Factorization",
+            "Linear-Algebra"
+        ]
+    },
+    {
+        "id": "neutrality_oracle",
+        "formula": "ResourceCost(M2) = R_ZERO -> ResourceCost(Seq(M1, M2)) = ResourceCost(M1)",
+        "interestingness": 0.82,
+        "status": "PROVED_ZK",
+        "tags": [
+            "Resource-Oracle",
+            "Neutrality"
+        ]
+    },
+    {
+        "id": "decomposition_oracle",
+        "formula": "Dep(M1, M2) = DEP_ZERO -> ResourceCost(Par_Dyn(M1, M2)) = Comp(Par_Dyn(M1, M2))",
+        "interestingness": 0.78,
+        "status": "PROVED_ZK",
+        "tags": [
+            "Resource-Oracle",
+            "Decomposition"
+        ]
+    }
+]

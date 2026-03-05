@@ -1,0 +1,14 @@
+[EDGE,RECOVER] step=1 auth=True rec=True risk=0.000 regime=CORRIDOR tightest=novelty min_margin=+0.019 [######------] I=0.472 (recovery) safety=+0.069 novelty=+0.019
+Traceback (most recent call last):
+
+[GOVERNANCE] Starting Discovery session with budget 1.0
+Initial State: LatentState(entropy=3.117778023711206, attention_coherence=1.0, embedding_norm=76.0, manifold_divergence=0.0, centroid_similarity=1.0)
+
+
+--- CYCLE 0 [AUTHORIZED] ---
+  [L1:PreGeneration_Grounding_Complete] -> CLEARED FOR DISCOVERY.
+  File "C:\Users\admin\OneDrive\Desktop\CoAI Operandics Discovery Engine\discovery\governed_engine.py", line 494, in <module>
+    session = explorer.governed_discovery_cycle(max_cycles=500)
+  File "C:\Users\admin\OneDrive\Desktop\CoAI Operandics Discovery Engine\discovery\governed_engine.py", line 362, in governed_discovery_cycle
+    self.saturator.max_depth = 8
+AttributeError: 'ForwardChainingSaturator' object has no attribute 'max_depth'

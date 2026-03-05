@@ -1,0 +1,12 @@
+{
+  "cycle": 50,
+  "lemmas_count": 2,
+  "counter_axioms_count": 7,
+  "atp_offset": 5850,
+  "saturator_clauses": 13640336,
+  "timestamp": 1772633896.9862168,
+  "last_proved": [
+    "Forall M1.Forall M2.(ResourceCost(M2) = R_ZERO -> ResourceCost(Seq(M1, M2)) = ResourceCost(M1))",
+    "Forall M1.Forall M2.(Dep(M1, M2) = DEP_ZERO -> ResourceCost(Par_Dyn(M1, M2)) = Comp(Par_Dyn(M1, M2)))"
+  ]
+}

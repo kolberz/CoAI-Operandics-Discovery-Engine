@@ -1,0 +1,101 @@
+{
+  "applied_rules_counter": {},
+  "attention_bundle_loaded": true,
+  "attention_bundle_path": "C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\discovery\\axioms\\attention_axioms.verified.json",
+  "attention_bundle_rule_ids": [
+    "linear_attention_associativity",
+    "compose_associativity",
+    "transpose_involutive",
+    "transpose_compose"
+  ],
+  "attention_bundle_schema_version": 1,
+  "attention_bundle_sha256_16": "a3213e5b4a67bc79",
+  "certified_mode": true,
+  "corridor_outcomes": [
+    {
+      "authorized": true,
+      "cycle": 0,
+      "min_margin": 0.00567528114186853,
+      "recovered": true,
+      "regime": "CORRIDOR",
+      "risk": 0.0,
+      "state": {
+        "attention_coherence": 0.15482398897058824,
+        "centroid_similarity": 0.5,
+        "embedding_norm": 0.0,
+        "entropy": 0.8325000000000001,
+        "manifold_divergence": 1.0
+      },
+      "tightest_gate": "safety",
+      "violated_gates": []
+    },
+    {
+      "authorized": true,
+      "cycle": 1,
+      "min_margin": 0.00567528114186853,
+      "recovered": true,
+      "regime": "CORRIDOR",
+      "risk": 0.0,
+      "state": {
+        "attention_coherence": 0.15482398897058824,
+        "centroid_similarity": 0.5,
+        "embedding_norm": 0.0,
+        "entropy": 0.8325000000000001,
+        "manifold_divergence": 1.0
+      },
+      "tightest_gate": "safety",
+      "violated_gates": []
+    },
+    {
+      "authorized": true,
+      "cycle": 2,
+      "min_margin": 0.00567528114186853,
+      "recovered": true,
+      "regime": "CORRIDOR",
+      "risk": 0.0,
+      "state": {
+        "attention_coherence": 0.15482398897058824,
+        "centroid_similarity": 0.5,
+        "embedding_norm": 0.0,
+        "entropy": 0.8325000000000001,
+        "manifold_divergence": 1.0
+      },
+      "tightest_gate": "safety",
+      "violated_gates": []
+    },
+    {
+      "authorized": true,
+      "cycle": 3,
+      "min_margin": 0.00567528114186853,
+      "recovered": true,
+      "regime": "CORRIDOR",
+      "risk": 0.0,
+      "state": {
+        "attention_coherence": 0.15482398897058824,
+        "centroid_similarity": 0.5,
+        "embedding_norm": 0.0,
+        "entropy": 0.8325000000000001,
+        "manifold_divergence": 1.0
+      },
+      "tightest_gate": "safety",
+      "violated_gates": []
+    },
+    {
+      "authorized": true,
+      "cycle": 4,
+      "min_margin": 0.00567528114186853,
+      "recovered": true,
+      "regime": "CORRIDOR",
+      "risk": 0.0,
+      "state": {
+        "attention_coherence": 0.15482398897058824,
+        "centroid_similarity": 0.5,
+        "embedding_norm": 0.0,
+        "entropy": 0.8325000000000001,
+        "manifold_divergence": 1.0
+      },
+      "tightest_gate": "safety",
+      "violated_gates": []
+    }
+  ]
+}

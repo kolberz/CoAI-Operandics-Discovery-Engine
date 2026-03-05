@@ -1,0 +1,254 @@
+
+============================================================
+  CoAI OPERANDICS DISCOVERY ENGINE v2.0
+  Enhanced: Congruence | Deduplication | Diverse Conjectures
+============================================================
+============================================================
+  PROVER SELF-TEST
+============================================================
+
+  Test 1: Risk(Seq(X, ID_M)) = Risk(X)
+  Result: PROVED in 0 steps
+  Reason: EGRAPH_NORMALIZATION
+
+  Test 2 (should fail): Seq commutativity
+  Result: FAILED in 3003 steps
+  Reason: NO_PROOF_FOUND
+
+  Prover self-test: PASSED
+
+============================================================
+  TARGETED THEOREM VERIFICATION
+============================================================
+
+  Target: Risk Identity Simplification
+  Formula: Forall M1.Risk(Seq(M1, ID_M)) = Risk(M1)
+  Result: [OK] PROVED in 0 steps
+
+  Target: Parallel Self-Composition Idempotency
+  Formula: Forall M1.Risk(Par_Dyn(M1, M1)) = Risk(M1)
+  Result: [OK] PROVED in 0 steps
+
+  Target: Parallel Commutativity
+  Formula: Forall M1.Forall M2.Par_Dyn(M1, M2) = Par_Dyn(M2, M1)
+  Result: [FAIL] FAILED (NO_PROOF_FOUND) in 3003 steps
+
+  Target: Seq Associativity
+  Formula: Forall M1.Forall M2.Forall M3.Seq(Seq(M1, M2), M3) = Seq(M1, Seq(M2, M3))
+  Result: [FAIL] FAILED (NO_PROOF_FOUND) in 3003 steps
+
+  Target: Risk(ID_M) = 0
+  Formula: Risk(ID_M) = R_ZERO
+  Result: [OK] PROVED in 0 steps
+
+  Target: Trivial Barrier has no penalty
+  Formula: Forall M1.Risk(Barrier(M1, P_TRUE)) = Risk(M1)
+  Result: [OK] PROVED in 0 steps
+
+  Target: Security Bottleneck
+  Formula: Forall M1.Forall M2.Ent(Seq(M1, M2)) = min(Ent(M1), Ent(M2))
+  Result: [FAIL] FAILED (NO_PROOF_FOUND) in 3003 steps
+
+  Target: Cost(Seq(M, ID)) = Cost(M)
+  Formula: Forall M1.ResourceCost(Seq(M1, ID_M)) = ResourceCost(M1)
+  Result: [OK] PROVED in 0 steps
+
+  Target: Ent(Seq(M, ID)) = Ent(M)
+  Formula: Forall M1.Ent(Seq(M1, ID_M)) = Ent(M1)
+  Result: [OK] PROVED in 0 steps
+
+  Target: Par cost <= Seq cost
+  Formula: Forall M1.Forall M2.ResourceCost(Par_Dyn(M1, M2)) <= ResourceCost(Seq(M1, M2))
+  Result: [FAIL] FAILED (NO_PROOF_FOUND) in 3003 steps
+
+============================================================
+  CoAI OPERANDICS DISCOVERY ENGINE
+============================================================
+
+  Initialized with 66 axioms
+  Starting cumulative discovery loop (5 cycles)...
+
+============================================================
+  DISCOVERY CYCLE 0
+  Axioms: 66  Lemmas: 0  Counter-axioms: 0
+============================================================
+
+  Phase 1: Saturating knowledge base...
+    [SATURATE] Admitted 50 clauses... (Heap: 525)
+    [SATURATE] Admitted 100 clauses... (Heap: 926)
+  Found 147 interesting consequences
+    [1.00] times(Comp(Par_Dyn(ID_M, M1)), LANDAUER) <= ResourceCost(Par_Dyn(ID_M, M1))
+    [1.00] Par_Dyn(Par_Dyn(Par_Dyn(Ent(M1), M1), M1), M1) = Par_Dyn(Comp(M1), M1)
+    [1.00] Par_Dyn(Par_Dyn(Par_Dyn(Comp(M1), M1), M1), M1) = Par_Dyn(Ent(M1), M1)
+    [1.00] Par_Dyn(Par_Dyn(Ent(M1), M1), M1) = Comp(M1)
+    [1.00] Par_Dyn(Par_Dyn(Comp(M1), M1), M1) = Ent(M1)
+
+  Phase 2: Generating conjectures...
+  Generated 4 novel conjectures
+
+  Phase 3: Verifying conjectures (Parallel)...
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall M1.Forall M2.Seq(M1, M2) = Seq(M2, M1)
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall M1.Forall M2.ResourceCost(Par_Dyn(M1, M2)) <= ResourceCost(Seq(M1, M2))
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall M1.Forall M2.Comp(Par_Dyn(M1, M2)) <= Comp(Seq(M1, M2))
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall M1.Forall M2.Forall M3.Par_Dyn(Par_Dyn(M1, M2), M3) = Par_Dyn(M1, Par_Dyn(M2, M3))
+
+  Phase 4: Analyzing failures...
+    -| Counter-axiom: ~Forall M1.Forall M2.Seq(M1, M2) = Seq(M2, M1)
+    -| Counter-axiom: ~Forall M1.Forall M2.ResourceCost(Par_Dyn(M1, M2)) <= ResourceCost(Seq(M1, M2))
+    -| Counter-axiom: ~Forall M1.Forall M2.Comp(Par_Dyn(M1, M2)) <= Comp(Seq(M1, M2))
+    -| Counter-axiom: ~Forall M1.Forall M2.Forall M3.Par_Dyn(Par_Dyn(M1, M2), M3) = Par_Dyn(M1, Par_Dyn(M2, M3))
+
+  Cycle 0 complete in 36.5s
+  Proved: 0 | Failed: 4 | Counter-axioms: 4
+
+============================================================
+  DISCOVERY CYCLE 1
+  Axioms: 66  Lemmas: 0  Counter-axioms: 4
+============================================================
+
+  Phase 1: Saturating knowledge base...
+    [SATURATE] Admitted 50 clauses... (Heap: 529)
+    [SATURATE] Admitted 100 clauses... (Heap: 930)
+  Found 118 interesting consequences
+    [1.00] Par_Dyn(Par_Dyn(Par_Dyn(Ent(M1), M1), M1), M1) = Par_Dyn(Comp(M1), M1)
+    [1.00] Par_Dyn(Par_Dyn(Par_Dyn(Comp(M1), M1), M1), M1) = Par_Dyn(Ent(M1), M1)
+    [1.00] Par_Dyn(Par_Dyn(Ent(M1), M1), M1) = Comp(M1)
+    [1.00] Par_Dyn(Par_Dyn(Comp(M1), M1), M1) = Ent(M1)
+    [1.00] Par_Dyn(Par_Dyn(Par_Dyn(Ent(M1), M1), M1), M1) = Comp(M1)
+
+  Phase 2: Generating conjectures...
+  Generated 4 novel conjectures
+
+  Phase 3: Verifying conjectures (Parallel)...
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall M1.Forall M2.Risk(Par_Dyn(M1, M2)) = max(Risk(M1), Risk(M2))
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall M1.Forall M2.Ent(Par_Dyn(M1, M2)) = min(Ent(M1), Ent(M2))
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall M1.Forall M2.ResourceCost(Seq(M1, M2)) = ResourceCost(Seq(M2, M1))
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall M1.Barrier(M1, P_TRUE) = M1
+
+  Phase 4: Analyzing failures...
+    -| Counter-axiom: ~Forall M1.Forall M2.Risk(Par_Dyn(M1, M2)) = max(Risk(M1), Risk(M2))
+    -| Counter-axiom: ~Forall M1.Forall M2.Ent(Par_Dyn(M1, M2)) = min(Ent(M1), Ent(M2))
+    -| Counter-axiom: ~Forall M1.Forall M2.ResourceCost(Seq(M1, M2)) = ResourceCost(Seq(M2, M1))
+    -| Counter-axiom: ~Forall M1.Barrier(M1, P_TRUE) = M1
+
+  Cycle 1 complete in 40.0s
+  Proved: 0 | Failed: 4 | Counter-axioms: 4
+
+============================================================
+  DISCOVERY CYCLE 2
+  Axioms: 66  Lemmas: 0  Counter-axioms: 8
+============================================================
+
+  Phase 1: Saturating knowledge base...
+    [SATURATE] Admitted 50 clauses... (Heap: 539)
+    [SATURATE] Admitted 100 clauses... (Heap: 884)
+    [SATURATE] Admitted 150 clauses... (Heap: 1351)
+  Found 118 interesting consequences
+    [1.00] Par_Dyn(Par_Dyn(Par_Dyn(Ent(M1), M1), M1), M1) = Par_Dyn(Comp(M1), M1)
+    [1.00] Par_Dyn(Par_Dyn(Par_Dyn(Comp(M1), M1), M1), M1) = Par_Dyn(Ent(M1), M1)
+    [1.00] Par_Dyn(Par_Dyn(Ent(M1), M1), M1) = Comp(M1)
+    [1.00] Par_Dyn(Par_Dyn(Comp(M1), M1), M1) = Ent(M1)
+    [1.00] Par_Dyn(Par_Dyn(Par_Dyn(Ent(M1), M1), M1), M1) = Comp(M1)
+
+  Phase 2: Generating conjectures...
+  Generated 3 novel conjectures
+
+  Phase 3: Verifying conjectures (Parallel)...
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall M1.Par_Dyn(M1, M1) = M1
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall M1.Forall M2.Comp(Seq(M1, M2)) = Comp(Seq(M2, M1))
+    [FAIL] FAILED (NO_PROOF_FOUND): Forall M1.Forall M2.ResourceCost(Par_Dyn(M1, M2)) = ResourceCost(Par_Dyn(M2, M1))
+
+  Phase 4: Analyzing failures...
+    -| Counter-axiom: ~Forall M1.Par_Dyn(M1, M1) = M1
+    -| Counter-axiom: ~Forall M1.Forall M2.Comp(Seq(M1, M2)) = Comp(Seq(M2, M1))
+    -| Counter-axiom: ~Forall M1.Forall M2.ResourceCost(Par_Dyn(M1, M2)) = ResourceCost(Par_Dyn(M2, M1))
+
+  Cycle 2 complete in 36.5s
+  Proved: 0 | Failed: 3 | Counter-axioms: 3
+
+============================================================
+  DISCOVERY CYCLE 3
+  Axioms: 66  Lemmas: 0  Counter-axioms: 11
+============================================================
+
+  Phase 1: Saturating knowledge base...
+    [SATURATE] Admitted 50 clauses... (Heap: 543)
+    [SATURATE] Admitted 100 clauses... (Heap: 888)
+    [SATURATE] Admitted 150 clauses... (Heap: 1355)
+  Found 118 interesting consequences
+    [1.00] Par_Dyn(Par_Dyn(Par_Dyn(Ent(M1), M1), M1), M1) = Par_Dyn(Comp(M1), M1)
+    [1.00] Par_Dyn(Par_Dyn(Par_Dyn(Comp(M1), M1), M1), M1) = Par_Dyn(Ent(M1), M1)
+    [1.00] Par_Dyn(Par_Dyn(Ent(M1), M1), M1) = Comp(M1)
+    [1.00] Par_Dyn(Par_Dyn(Comp(M1), M1), M1) = Ent(M1)
+    [1.00] Par_Dyn(Par_Dyn(Par_Dyn(Ent(M1), M1), M1), M1) = Comp(M1)
+
+  Phase 2: Generating conjectures...
+  Generated 0 novel conjectures
+
+  Phase 3: Verifying conjectures (Parallel)...
+
+  Phase 4: Analyzing failures...
+    (no new counter-axioms)
+
+  Cycle 3 complete in 11.6s
+  Proved: 0 | Failed: 0 | Counter-axioms: 0
+
+============================================================
+  DISCOVERY CYCLE 4
+  Axioms: 66  Lemmas: 0  Counter-axioms: 11
+============================================================
+
+  Phase 1: Saturating knowledge base...
+    [SATURATE] Admitted 50 clauses... (Heap: 480)
+    [SATURATE] Admitted 100 clauses... (Heap: 907)
+    [SATURATE] Admitted 150 clauses... (Heap: 1363)
+  Found 118 interesting consequences
+    [1.00] Par_Dyn(Par_Dyn(Par_Dyn(Ent(M1), M1), M1), M1) = Par_Dyn(Comp(M1), M1)
+    [1.00] Par_Dyn(Par_Dyn(Par_Dyn(Comp(M1), M1), M1), M1) = Par_Dyn(Ent(M1), M1)
+    [1.00] Par_Dyn(Par_Dyn(Ent(M1), M1), M1) = Comp(M1)
+    [1.00] Par_Dyn(Par_Dyn(Comp(M1), M1), M1) = Ent(M1)
+    [1.00] Par_Dyn(Par_Dyn(Par_Dyn(Ent(M1), M1), M1), M1) = Comp(M1)
+
+  Phase 2: Generating conjectures...
+  Generated 0 novel conjectures
+
+  Phase 3: Verifying conjectures (Parallel)...
+
+  Phase 4: Analyzing failures...
+    (no new counter-axioms)
+
+  Cycle 4 complete in 11.9s
+  Proved: 0 | Failed: 0 | Counter-axioms: 0
+
+============================================================
+  DISCOVERY REPORT
+============================================================
+
+  Statistics:
+    total_axioms: 66
+    total_lemmas: 0
+    total_counter_axioms: 11
+    total_discoveries: 0
+    total_oracle_stipulations: 0
+
+  Top Discoveries (by interestingness):
+
+  Counter-Axioms (failed conjectures):
+    -| ~Forall M1.Forall M2.Seq(M1, M2) = Seq(M2, M1)
+    -| ~Forall M1.Forall M2.ResourceCost(Par_Dyn(M1, M2)) <= ResourceCost(Seq(M1, M2))
+    -| ~Forall M1.Forall M2.Comp(Par_Dyn(M1, M2)) <= Comp(Seq(M1, M2))
+    -| ~Forall M1.Forall M2.Forall M3.Par_Dyn(Par_Dyn(M1, M2), M3) = Par_Dyn(M1, Par_Dyn(M2, M3))
+    -| ~Forall M1.Forall M2.Risk(Par_Dyn(M1, M2)) = max(Risk(M1), Risk(M2))
+    -| ~Forall M1.Forall M2.Ent(Par_Dyn(M1, M2)) = min(Ent(M1), Ent(M2))
+    -| ~Forall M1.Forall M2.ResourceCost(Seq(M1, M2)) = ResourceCost(Seq(M2, M1))
+    -| ~Forall M1.Barrier(M1, P_TRUE) = M1
+    -| ~Forall M1.Par_Dyn(M1, M1) = M1
+    -| ~Forall M1.Forall M2.Comp(Seq(M1, M2)) = Comp(Seq(M2, M1))
+    -| ~Forall M1.Forall M2.ResourceCost(Par_Dyn(M1, M2)) = ResourceCost(Par_Dyn(M2, M1))
+
+============================================================
+  Total runtime: 229.8s
+  Theorems discovered: 0
+  Counter-axioms: 11
+  Oracle axioms: 0
+============================================================

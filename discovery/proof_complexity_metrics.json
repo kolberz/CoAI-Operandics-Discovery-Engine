@@ -1,0 +1,166 @@
+{
+  "verified_theorems": [
+    {
+      "formula": "Final_Convergence(Omega_Point) = Absolute_One",
+      "proof_steps": 3,
+      "search_depth": 1,
+      "compression_ratio": 1.5,
+      "citation_count": 422,
+      "score": 0.8731,
+      "zk_proof": "5cab39c9009ffd86b01360f22aed4c7c5c99875e09d84a0923057f708ec36823"
+    },
+    {
+      "formula": "Synthesize_All(Hawking_Gibbons_Entropy(Get_Horizon(dS_Vacuum)), Four_G_Newton) = Omega_Point",
+      "proof_steps": 3,
+      "search_depth": 1,
+      "compression_ratio": 3.0,
+      "citation_count": 207,
+      "score": 0.9357,
+      "zk_proof": "c1bf7fe48d62f5774057057c7c0cb1c387e7abba52e20bd36b09b56de05bfe92"
+    },
+    {
+      "formula": "Final_Convergence(Synthesize_All(Horizon_Area(Universal_Vacuum), Horizon_Area(Universal_Vacuum))) = Final_Convergence(Synthesize_All(Divide_Obs(Four_G_Newton, Four_G_Newton), Divide_Obs(Four_G_Newton, Four_G_Newton)))",
+      "proof_steps": 4,
+      "search_depth": 1,
+      "compression_ratio": 7.0,
+      "citation_count": 1,
+      "score": 0.99,
+      "zk_proof": "1edee8875399fadfbe3d18b4144199a8903743171dd5dbcdab064e41926ebd18"
+    },
+    {
+      "formula": "Synthesize_All(Hawking_Gibbons_Entropy(Get_Horizon(Universal_Vacuum)), Divide_Obs(Hawking_Gibbons_Entropy(Universal_Vacuum), Divide_Obs(Four_G_Newton, Four_G_Newton))) = Synthesize_All(Horizon_Area(Get_Horizon(Universal_Vacuum)), Hawking_Gibbons_Entropy(Get_Horizon(Universal_Vacuum)))",
+      "proof_steps": 4,
+      "search_depth": 1,
+      "compression_ratio": 8.5,
+      "citation_count": 1,
+      "score": 0.99,
+      "zk_proof": "b962044d7f36a2fa31695f0413719962c4d7149757d8e5aa54ad454d4fc56e36"
+    },
+    {
+      "formula": "Final_Convergence(Arithmetic_Map(Arithmetic_Map(Omega_Point))) = Final_Convergence(Arithmetic_Map(Arithmetic_Map(Omega_Point)))",
+      "proof_steps": 2,
+      "search_depth": 1,
+      "compression_ratio": 1.0,
+      "citation_count": 2,
+      "score": 0.8203,
+      "zk_proof": "3d381bae30c238e25f82e74edd8fe6d8e2d457301fa8ef3eb853af94319633ab"
+    },
+    {
+      "formula": "Synthesize_All(Divide_Obs(Horizon_Area(Universal_Vacuum), Hawking_Gibbons_Entropy(Universal_Vacuum)), Hawking_Gibbons_Entropy(Get_Horizon(Universal_Vacuum))) = Synthesize_All(Divide_Obs(Horizon_Area(Universal_Vacuum), Divide_Obs(Four_G_Newton, Four_G_Newton)), Divide_Obs(Divide_Obs(Four_G_Newton, Four_G_Newton), Divide_Obs(Four_G_Newton, Four_G_Newton)))",
+      "proof_steps": 4,
+      "search_depth": 1,
+      "compression_ratio": 11.5,
+      "citation_count": 1,
+      "score": 0.99,
+      "zk_proof": "03944ac41f7d6f9bde8a68db9034961f607b980270f23a63dd203a0997cb98cf"
+    },
+    {
+      "formula": "Horizon_Area(Get_Horizon(Universal_Vacuum)) = Horizon_Area(Get_Horizon(Universal_Vacuum))",
+      "proof_steps": 2,
+      "search_depth": 2,
+      "compression_ratio": 1.0,
+      "citation_count": 4,
+      "score": 0.1803,
+      "zk_proof": "a4213a6d02c94a690d1c4cb4b4527117db45896b89596105cf1ed6fb335e0006"
+    },
+    {
+      "formula": "Final_Convergence(Arithmetic_Map(Synthesize_All(Four_G_Newton, Four_G_Newton))) = Final_Convergence(Arithmetic_Map(Synthesize_All(Four_G_Newton, Four_G_Newton)))",
+      "proof_steps": 4,
+      "search_depth": 2,
+      "compression_ratio": 1.667,
+      "citation_count": 3,
+      "score": 0.8995,
+      "zk_proof": "40385de5bcdd638c457ef3beb130c5968fa46f765e8d93397975d3e2c577e9d2"
+    },
+    {
+      "formula": "Final_Convergence(Synthesize_All(Divide_Obs(Four_G_Newton, Four_G_Newton), Hawking_Gibbons_Entropy(Universal_Vacuum))) = Final_Convergence(Synthesize_All(Divide_Obs(Four_G_Newton, Four_G_Newton), Divide_Obs(Four_G_Newton, Four_G_Newton)))",
+      "proof_steps": 4,
+      "search_depth": 2,
+      "compression_ratio": 7.5,
+      "citation_count": 1,
+      "score": 0.99,
+      "zk_proof": "473774a79872b94871a7e0614275ce8194d1d0e5ca60a103da34021d085ceb69"
+    },
+    {
+      "formula": "Final_Convergence(Synthesize_All(Divide_Obs(Four_G_Newton, Four_G_Newton), Horizon_Area(Universal_Vacuum))) = Final_Convergence(Synthesize_All(Hawking_Gibbons_Entropy(Universal_Vacuum), Hawking_Gibbons_Entropy(Universal_Vacuum)))",
+      "proof_steps": 4,
+      "search_depth": 4,
+      "compression_ratio": 6.5,
+      "citation_count": 1,
+      "score": 0.99,
+      "zk_proof": "35861350ad9d786762a25b2fefb5e4788f292625ca3dcba6f9befd21bc27b8aa"
+    },
+    {
+      "formula": "Final_Convergence(Synthesize_All(Hawking_Gibbons_Entropy(Universal_Vacuum), Horizon_Area(Universal_Vacuum))) = Final_Convergence(Synthesize_All(Horizon_Area(Universal_Vacuum), Divide_Obs(Four_G_Newton, Four_G_Newton)))",
+      "proof_steps": 4,
+      "search_depth": 4,
+      "compression_ratio": 6.5,
+      "citation_count": 1,
+      "score": 0.99,
+      "zk_proof": "6fad11ce2af93e1e4b2945b2f42cd92a0ba76e920a054410c4520ef785de15d8"
+    },
+    {
+      "formula": "Final_Convergence(Synthesize_All(Horizon_Area(Universal_Vacuum), Divide_Obs(Four_G_Newton, Four_G_Newton))) = Final_Convergence(Synthesize_All(Divide_Obs(Four_G_Newton, Four_G_Newton), Horizon_Area(Universal_Vacuum)))",
+      "proof_steps": 4,
+      "search_depth": 4,
+      "compression_ratio": 7.0,
+      "citation_count": 1,
+      "score": 0.99,
+      "zk_proof": "90701b2d6c5ba005ffb50322a95ca3780f4fb85c1649168e52370f005fc9c9cf"
+    },
+    {
+      "formula": "Hawking_Gibbons_Entropy(Get_Horizon(Universal_Vacuum)) = Hawking_Gibbons_Entropy(Get_Horizon(Universal_Vacuum))",
+      "proof_steps": 4,
+      "search_depth": 5,
+      "compression_ratio": 0.6,
+      "citation_count": 1,
+      "score": 0.1914,
+      "zk_proof": "e2c2d57541094b72873a6d1de76e55b43bf35e905105e1d5049c93afc0f2101b"
+    },
+    {
+      "formula": "Arithmetic_Map(Synthesize_All(Divide_Obs(Four_G_Newton, Four_G_Newton), Horizon_Area(Universal_Vacuum))) = Arithmetic_Map(Synthesize_All(Horizon_Area(Universal_Vacuum), Horizon_Area(Universal_Vacuum)))",
+      "proof_steps": 4,
+      "search_depth": 5,
+      "compression_ratio": 3.25,
+      "citation_count": 1,
+      "score": 0.9617,
+      "zk_proof": "53162b0f947ad5ec6b33ba120667761c15f9b4e737e54b6d67e0c0c8fe610e26"
+    },
+    {
+      "formula": "Synthesize_All(Hawking_Gibbons_Entropy(Get_Horizon(Universal_Vacuum)), Horizon_Area(Get_Horizon(Universal_Vacuum))) = Synthesize_All(Divide_Obs(Divide_Obs(Four_G_Newton, Four_G_Newton), Divide_Obs(Four_G_Newton, Four_G_Newton)), Divide_Obs(Horizon_Area(Universal_Vacuum), Horizon_Area(Universal_Vacuum)))",
+      "proof_steps": 4,
+      "search_depth": 5,
+      "compression_ratio": 10.0,
+      "citation_count": 1,
+      "score": 0.99,
+      "zk_proof": "85cf15674b2a64b20a490bca01f5d1dcb15c705f355fe46178c6d3abfca75b5a"
+    },
+    {
+      "formula": "Final_Convergence(Synthesize_All(Divide_Obs(Four_G_Newton, Four_G_Newton), Horizon_Area(Universal_Vacuum))) = Final_Convergence(Synthesize_All(Horizon_Area(Universal_Vacuum), Divide_Obs(Four_G_Newton, Four_G_Newton)))",
+      "proof_steps": 4,
+      "search_depth": 5,
+      "compression_ratio": 7.0,
+      "citation_count": 1,
+      "score": 0.99,
+      "zk_proof": "fdb8b7de90c3da88f34edf0e083da560ecb02bf873543e26877dc159ca9e155d"
+    },
+    {
+      "formula": "Synthesize_All(Divide_Obs(Divide_Obs(Four_G_Newton, Four_G_Newton), Divide_Obs(Four_G_Newton, Four_G_Newton)), Divide_Obs(Divide_Obs(Four_G_Newton, Four_G_Newton), Divide_Obs(Four_G_Newton, Four_G_Newton))) = Synthesize_All(Divide_Obs(Horizon_Area(Universal_Vacuum), Divide_Obs(Four_G_Newton, Four_G_Newton)), Horizon_Area(Get_Horizon(Universal_Vacuum)))",
+      "proof_steps": 4,
+      "search_depth": 5,
+      "compression_ratio": 12.5,
+      "citation_count": 1,
+      "score": 0.99,
+      "zk_proof": "7f6a3b292803bfe97a222afae98e04ca54145411b685186ae3404121ecb97729"
+    },
+    {
+      "formula": "Final_Convergence(Synthesize_All(Horizon_Area(Universal_Vacuum), Horizon_Area(Universal_Vacuum))) = Final_Convergence(Synthesize_All(Divide_Obs(Four_G_Newton, Four_G_Newton), Horizon_Area(Universal_Vacuum)))",
+      "proof_steps": 4,
+      "search_depth": 6,
+      "compression_ratio": 6.5,
+      "citation_count": 1,
+      "score": 0.99,
+      "zk_proof": "c85c2a06d49a4723a2eedd79bc97dd35aca57a90cfbcf7cdf89c607fec225707"
+    }
+  ]
+}

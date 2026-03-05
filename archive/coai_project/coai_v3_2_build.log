@@ -1,0 +1,5 @@
+⚠ [1740/1744] Replayed CoAI.Control
+warning: CoAI/Control.lean:28:8: declaration uses `sorry`
+warning: CoAI/Control.lean:39:10: declaration uses `sorry`
+warning: CoAI/Control.lean:52:10: declaration uses `sorry`
+Build completed successfully (3472 jobs).

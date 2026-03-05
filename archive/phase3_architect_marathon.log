@@ -1,0 +1,27 @@
+[EDGE,RECOVER] step=1 auth=True rec=True risk=0.000 regime=CORRIDOR tightest=novelty min_margin=+0.019 [######------] I=0.472 (recovery) safety=+0.069 novelty=+0.019
+
+Traceback (most recent call last):
+[GOVERNANCE] Starting Discovery session with budget 1.0
+Initial State: LatentState(entropy=3.117778023711206, attention_coherence=1.0, embedding_norm=76.0, manifold_divergence=0.0, centroid_similarity=1.0)
+
+
+--- CYCLE 0 [AUTHORIZED] ---
+  [L1:PreGeneration_Grounding_Complete] -> CLEARED FOR DISCOVERY.
+  Phase 1: Saturating (depth=8)...
+  File "C:\Users\admin\OneDrive\Desktop\CoAI Operandics Discovery Engine\discovery\governed_engine.py", line 494, in <module>
+    session = explorer.governed_discovery_cycle(max_cycles=500)
+  File "C:\Users\admin\OneDrive\Desktop\CoAI Operandics Discovery Engine\discovery\governed_engine.py", line 369, in governed_discovery_cycle
+    theorems = self.discover_theorems(limit=limit)
+  File "C:\Users\admin\OneDrive\Desktop\CoAI Operandics Discovery Engine\discovery\engine.py", line 916, in discover_theorems
+    result = self.saturator.saturate(all_formulas)
+  File "C:\Users\admin\OneDrive\Desktop\CoAI Operandics Discovery Engine\discovery\saturator.py", line 314, in saturate
+    generated = list(sat.run())
+  File "C:\Users\admin\OneDrive\Desktop\CoAI Operandics Discovery Engine\discovery\saturator.py", line 264, in run
+    for res in self.ops.resolve(given, other):
+  File "C:\Users\admin\OneDrive\Desktop\CoAI Operandics Discovery Engine\discovery\saturator.py", line 124, in resolve
+    for new_clause in self._paramod_subterms(lit.atom, r2):
+  File "C:\Users\admin\OneDrive\Desktop\CoAI Operandics Discovery Engine\discovery\saturator.py", line 135, in _paramod_subterms
+    for new_lhs in self._rewrite_all_subterms(atom.left, rule_eq):
+  File "C:\Users\admin\OneDrive\Desktop\CoAI Operandics Discovery Engine\discovery\saturator.py", line 146, in _rewrite_all_subterms
+    from core.unification import unify
+ImportError: cannot import name 'unify' from 'core.unification' (C:\Users\admin\OneDrive\Desktop\CoAI Operandics Discovery Engine\core\unification.py)

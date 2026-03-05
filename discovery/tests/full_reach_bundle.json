@@ -1,0 +1,1297 @@
+{
+  "schema_version": "4.0.0",
+  "timestamp": "2026-03-04T03:08:31Z",
+  "stats": {
+    "uptime": 0.002156972885131836,
+    "total_theorems": 71,
+    "completed_count": 71,
+    "unlocked_count": 0,
+    "current_max_stage": 71,
+    "stage_map": {
+      "completed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71
+      ],
+      "unlocked": [],
+      "proceeding": []
+    }
+  },
+  "stages": [
+    {
+      "id": 1,
+      "name": "Stage 1",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_1 = V_1",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_1"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Stage 2",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_2 = V_2",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_2"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Stage 3",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_3 = V_3",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_3"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Stage 4",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_4 = V_4",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_4"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Stage 5",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_5 = V_5",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_5"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Stage 6",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_6 = V_6",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_6"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Stage 7",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_7 = V_7",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_7"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Stage 8",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_8 = V_8",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_8"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Stage 9",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_9 = V_9",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_9"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Stage 10",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_10 = V_10",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_10"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Stage 11",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_11 = V_11",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_11"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Stage 12",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_12 = V_12",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_12"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Stage 13",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_13 = V_13",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_13"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Stage 14",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_14 = V_14",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_14"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Stage 15",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_15 = V_15",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_15"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Stage 16",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_16 = V_16",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_16"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Stage 17",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_17 = V_17",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_17"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Stage 18",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_18 = V_18",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_18"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Stage 19",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_19 = V_19",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_19"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Stage 20",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_20 = V_20",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_20"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Stage 21",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_21 = V_21",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_21"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Stage 22",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_22 = V_22",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_22"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "name": "Stage 23",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_23 = V_23",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_23"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "name": "Stage 24",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_24 = V_24",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_24"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "name": "Stage 25",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_25 = V_25",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_25"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "name": "Stage 26",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_26 = V_26",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_26"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "name": "Stage 27",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_27 = V_27",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_27"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "name": "Stage 28",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_28 = V_28",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_28"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "name": "Stage 29",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_29 = V_29",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_29"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "name": "Stage 30",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_30 = V_30",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_30"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "name": "Stage 31",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_31 = V_31",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_31"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "name": "Stage 32",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_32 = V_32",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_32"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "name": "Stage 33",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_33 = V_33",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_33"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "name": "Stage 34",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_34 = V_34",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_34"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "name": "Stage 35",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_35 = V_35",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_35"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "name": "Stage 36",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_36 = V_36",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_36"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "name": "Stage 37",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_37 = V_37",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_37"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "name": "Stage 38",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_38 = V_38",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_38"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "name": "Stage 39",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_39 = V_39",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_39"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "name": "Stage 40",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_40 = V_40",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_40"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "name": "Stage 41",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_41 = V_41",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_41"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "name": "Stage 42",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_42 = V_42",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_42"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "name": "Stage 43",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_43 = V_43",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_43"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "name": "Stage 44",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_44 = V_44",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_44"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "name": "Stage 45",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_45 = V_45",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_45"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "name": "Stage 46",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_46 = V_46",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_46"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "name": "Stage 47",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_47 = V_47",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_47"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "name": "Stage 48",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_48 = V_48",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_48"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "name": "Stage 49",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_49 = V_49",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_49"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "name": "Stage 50",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_50 = V_50",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_50"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "name": "Stage 51",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_51 = V_51",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_51"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "name": "Stage 52",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_52 = V_52",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_52"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "name": "Stage 53",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_53 = V_53",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_53"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "name": "Stage 54",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_54 = V_54",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_54"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "name": "Stage 55",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_55 = V_55",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_55"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "name": "Stage 56",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_56 = V_56",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_56"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "name": "Stage 57",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_57 = V_57",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_57"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "name": "Stage 58",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_58 = V_58",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_58"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "name": "Stage 59",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_59 = V_59",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_59"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "name": "Stage 60",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_60 = V_60",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_60"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "name": "Stage 61",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_61 = V_61",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_61"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "name": "Stage 62",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_62 = V_62",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_62"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "name": "Stage 63",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_63 = V_63",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_63"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 64,
+      "name": "Stage 64",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_64 = V_64",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_64"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "name": "Stage 65",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_65 = V_65",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_65"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 66,
+      "name": "Stage 66",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_66 = V_66",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_66"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 67,
+      "name": "Stage 67",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_67 = V_67",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_67"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 68,
+      "name": "Stage 68",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_68 = V_68",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_68"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 69,
+      "name": "Stage 69",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_69 = V_69",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_69"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 70,
+      "name": "Stage 70",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_70 = V_70",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_70"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    },
+    {
+      "id": 71,
+      "name": "Stage 71",
+      "status": "COMPLETE",
+      "theorems": [
+        {
+          "formula": "V_71 = V_71",
+          "interestingness": 0.9,
+          "tags": [
+            "stage_71"
+          ],
+          "verification": "PROVED",
+          "cycle": 1,
+          "proof_steps": 0
+        }
+      ]
+    }
+  ]
+}

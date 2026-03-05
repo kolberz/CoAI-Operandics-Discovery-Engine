@@ -1,0 +1,104 @@
+[EDGE,RECOVER] step=1 auth=True rec=True risk=0.000 regime=CORRIDOR tightest=novelty min_margin=+0.019 [######------] I=0.472 (recovery) safety=+0.069 novelty=+0.019
+[EDGE,RECOVER] step=2 auth=True rec=True risk=0.000 regime=CORRIDOR tightest=novelty min_margin=+0.028 [######------] I=0.492 (recovery) safety=+0.059 novelty=+0.028
+[EDGE,RECOVER] step=3 auth=True rec=True risk=0.000 regime=CORRIDOR tightest=novelty min_margin=+0.027 [######------] I=0.491 (recovery) safety=+0.053 novelty=+0.027
+
+[GOVERNANCE] Starting Discovery session with budget 1.0
+Initial State: LatentState(entropy=3.117778023711206, attention_coherence=1.0, embedding_norm=76.0, manifold_divergence=0.0, centroid_similarity=1.0)
+
+
+--- CYCLE 0 [AUTHORIZED] ---
+  [L1:PreGeneration_Grounding_Complete] -> CLEARED FOR DISCOVERY.
+  Phase 1: Saturating (depth=8)...
+    [SATURATE] Admitted 50 clauses... (Heap: 90)
+    [SATURATE] Admitted 100 clauses... (Heap: 94)
+    [SATURATE] Admitted 150 clauses... (Heap: 96)
+    [SATURATE] Admitted 200 clauses... (Heap: 100)
+    [SATURATE] Admitted 250 clauses... (Heap: 106)
+    [SATURATE] Admitted 300 clauses... (Heap: 98)
+    [SATURATE] Admitted 350 clauses... (Heap: 102)
+    [SATURATE] Admitted 400 clauses... (Heap: 98)
+    [SATURATE] Admitted 450 clauses... (Heap: 84)
+    [SATURATE] Admitted 500 clauses... (Heap: 76)
+    Found 1 potential theorems.
+  Phase 2: Promoted 14 conjectures.
+  Phase 3: Verifying (max_steps=1000)...
+    [OK] PROVED: Forall M1.Risk(Seq(M1, ID_M)) = Risk(M1) [EGRAPH_NORMALIZATION]
+    [OK] PROVED: Forall M1.Risk(Par_Dyn(M1, ID_M)) = Risk(M1) [EGRAPH_NORMALIZATION]
+    [OK] PROVED: Forall M1.ResourceCost(Seq(M1, ID_M)) = ResourceCost(M1) [EGRAPH_NORMALIZATION]
+    [OK] PROVED: Forall M1.ResourceCost(Par_Dyn(M1, ID_M)) = ResourceCost(M1) [EGRAPH_NORMALIZATION]
+    [OK] PROVED: Forall M1.Comp(Seq(M1, ID_M)) = Comp(M1) [EGRAPH_NORMALIZATION]
+    [OK] PROVED: Forall M1.Comp(Par_Dyn(M1, ID_M)) = Comp(M1) [EGRAPH_NORMALIZATION]
+    [OK] PROVED: Forall M1.Ent(Seq(M1, ID_M)) = Ent(M1) [EGRAPH_NORMALIZATION]
+    [OK] PROVED: Forall M1.Ent(Par_Dyn(M1, ID_M)) = Ent(M1) [EGRAPH_NORMALIZATION]
+    [FAIL] Forall M1.Forall M2.Seq(M1, M2) = Seq(M2, M1) | Stats: {'clauses_generated': 1035, 'max_risk_depth': 0, 'max_par_depth': 0}
+    [FAIL] Forall M1.Forall M2.ResourceCost(Par_Dyn(M1, M2)) <= ResourceCost(Seq(M1, M2)) | Stats: {'clauses_generated': 1035, 'max_risk_depth': 0, 'max_par_depth': 0}
+    [FAIL] Forall M1.Forall M2.Comp(Par_Dyn(M1, M2)) <= Comp(Seq(M1, M2)) | Stats: {'clauses_generated': 1035, 'max_risk_depth': 0, 'max_par_depth': 0}
+    [OK] PROVED: Forall M1.Forall M2.Forall M3.Par_Dyn(Par_Dyn(M1, M2), M3) = Par_Dyn(M1, Par_Dyn(M2, M3)) [EGRAPH_NORMALIZATION]
+    [FAIL] Forall M1.Risk(Par_Dyn(M1, Barrier(M1, P_TRUE))) = Risk(M1) | Stats: {'clauses_generated': 1035, 'max_risk_depth': 1, 'max_par_depth': 1}
+    [OK] PROVED: Forall M1.Risk(Superpose(M1, M1)) = Risk(M1) [EGRAPH_NORMALIZATION]
+
+--- CYCLE 1 [AUTHORIZED] ---
+  [L1:PreGeneration_Grounding_Complete] -> CLEARED FOR DISCOVERY.
+  Phase 1: Saturating (depth=8)...
+    [SATURATE] Admitted 50 clauses... (Heap: 100)
+    [SATURATE] Admitted 100 clauses... (Heap: 104)
+    [SATURATE] Admitted 150 clauses... (Heap: 106)
+    [SATURATE] Admitted 200 clauses... (Heap: 110)
+    [SATURATE] Admitted 250 clauses... (Heap: 116)
+Traceback (most recent call last):
+    [SATURATE] Admitted 300 clauses... (Heap: 108)
+    [SATURATE] Admitted 350 clauses... (Heap: 112)
+    [SATURATE] Admitted 400 clauses... (Heap: 108)
+  File "C:\Users\admin\OneDrive\Desktop\CoAI Operandics Discovery Engine\discovery\governed_engine.py", line 494, in <module>
+    [SATURATE] Admitted 450 clauses... (Heap: 94)
+    [SATURATE] Admitted 500 clauses... (Heap: 86)
+    Found 1 potential theorems.
+  Phase 2: Promoted 21 conjectures.
+  Phase 3: Verifying (max_steps=1050)...
+    [FAIL] Forall M1.Forall M2.Risk(Par_Dyn(M1, M2)) = max(Risk(M1), Risk(M2)) | Stats: {'clauses_generated': 1081, 'max_risk_depth': 1, 'max_par_depth': 1}
+    [FAIL] Forall M1.Forall M2.Ent(Par_Dyn(M1, M2)) = min(Ent(M1), Ent(M2)) | Stats: {'clauses_generated': 1081, 'max_risk_depth': 0, 'max_par_depth': 0}
+    [FAIL] Forall M1.Forall M2.ResourceCost(Seq(M1, M2)) = ResourceCost(Seq(M2, M1)) | Stats: {'clauses_generated': 1081, 'max_risk_depth': 0, 'max_par_depth': 0}
+    [OK] PROVED: Forall M1.Risk(Barrier(M1, P_TRUE)) = Risk(M1) [EGRAPH_NORMALIZATION]
+    [FAIL] Forall M1.Barrier(M1, P_TRUE) = M1 | Stats: {'clauses_generated': 1081, 'max_risk_depth': 0, 'max_par_depth': 0}
+    [OK] PROVED: Forall M1.Risk(Seq(Seq(M1, ID_M), ID_M)) = Risk(M1) [EGRAPH_NORMALIZATION]
+    [OK] PROVED: Forall M1.Risk(Par_Dyn(M1, Seq(M1, ID_M))) = Risk(M1) [EGRAPH_NORMALIZATION]
+    [OK] PROVED: Forall M1.Risk(Par_Dyn(Par_Dyn(M1, ID_M), ID_M)) = Risk(M1) [EGRAPH_NORMALIZATION]
+    [OK] PROVED: Forall M1.Risk(Par_Dyn(M1, Par_Dyn(M1, ID_M))) = Risk(M1) [EGRAPH_NORMALIZATION]
+    [OK] PROVED: Forall M1.Risk(Par_Dyn(M1, Superpose(M1, M1))) = Risk(M1) [EGRAPH_NORMALIZATION]
+
+--- CYCLE 2 [AUTHORIZED] ---
+  [L1:PreGeneration_Grounding_Complete] -> CLEARED FOR DISCOVERY.
+  Phase 1: Saturating (depth=8)...
+    [SATURATE] Admitted 50 clauses... (Heap: 106)
+    [SATURATE] Admitted 100 clauses... (Heap: 110)
+    [SATURATE] Admitted 150 clauses... (Heap: 112)
+    [SATURATE] Admitted 200 clauses... (Heap: 116)
+    [SATURATE] Admitted 250 clauses... (Heap: 122)
+    [SATURATE] Admitted 300 clauses... (Heap: 114)
+    [SATURATE] Admitted 350 clauses... (Heap: 118)
+    [SATURATE] Admitted 400 clauses... (Heap: 114)
+    [SATURATE] Admitted 450 clauses... (Heap: 100)
+    [SATURATE] Admitted 500 clauses... (Heap: 92)
+    Found 1 potential theorems.
+  Phase 2: Promoted 35 conjectures.
+  Phase 3: Verifying (max_steps=1100)...
+    [FAIL] Forall M1.Par_Dyn(M1, M1) = M1 | Stats: {'clauses_generated': 1128, 'max_risk_depth': 0, 'max_par_depth': 0}
+    [OK] PROVED: Forall M1.Risk(Par_Dyn(M1, M1)) = Risk(M1) [EGRAPH_NORMALIZATION]
+    [FAIL] Forall M1.Forall M2.Comp(Seq(M1, M2)) = Comp(Seq(M2, M1)) | Stats: {'clauses_generated': 1128, 'max_risk_depth': 0, 'max_par_depth': 0}
+    [OK] PROVED: Forall M1.Forall M2.ResourceCost(Par_Dyn(M1, M2)) = ResourceCost(Par_Dyn(M2, M1)) [EGRAPH_NORMALIZATION]
+    session = explorer.governed_discovery_cycle(max_cycles=500)
+  File "C:\Users\admin\OneDrive\Desktop\CoAI Operandics Discovery Engine\discovery\governed_engine.py", line 407, in governed_discovery_cycle
+    res = verifier.prove_with_normalization(conj, self.lemmas, max_steps=max_p_steps)
+  File "C:\Users\admin\OneDrive\Desktop\CoAI Operandics Discovery Engine\prover\general_atp.py", line 556, in prove_with_normalization
+    saturate_with_rewrites(egraph, rewrites)
+  File "C:\Users\admin\OneDrive\Desktop\CoAI Operandics Discovery Engine\discovery\normalization.py", line 306, in saturate_with_rewrites
+    t_rep = EApp("Risk", (EApp("Par_Dyn", (x_term, rep_inner_term)),))
+  File "C:\Users\admin\OneDrive\Desktop\CoAI Operandics Discovery Engine\discovery\normalization.py", line 274, in close_contextual_congruence
+    self._dirty_risk_roots.add(cls)
+  File "C:\Users\admin\OneDrive\Desktop\CoAI Operandics Discovery Engine\discovery\normalization.py", line 135, in add
+    self.proven_unions: list[tuple[int, int]] = []
+  File "<string>", line 3, in __hash__
+  File "<string>", line 3, in __hash__
+  File "<string>", line 3, in __hash__
+  [Previous line repeated 494 more times]
+RecursionError: maximum recursion depth exceeded

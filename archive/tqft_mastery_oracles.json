@@ -1,0 +1,43 @@
+{
+  "domain": "TQFT_2D",
+  "terminal_state": "Omega_Convergent",
+  "timestamp": 1772636418.907001,
+  "verified_oracles": [
+    {
+      "identity": "Compose(Genus_1_Surface, Genus_1_Surface) = Genus_2_Surface",
+      "score": 0.99,
+      "zk_proof": "042b540cec0cec34e4a36f068ffa5deaaf043ec6e1c504c899e1a67c951e6ac3",
+      "cycle": 3
+    },
+    {
+      "identity": "Compose(Genus_1_Surface, Genus_2_Surface) = Genus_3_Surface",
+      "score": 0.99,
+      "zk_proof": "f030d657b39fc01d296cc140365eb17da9eabbf4e9d4915af87130993c6b7734",
+      "cycle": 6
+    },
+    {
+      "identity": "Compose(Genus_2_Surface, Genus_1_Surface) = Genus_3_Surface",
+      "score": 0.99,
+      "zk_proof": "175c15df14d93c29ed726db03920b83330884d406f26af9e77ef3645aa33b145",
+      "cycle": 6
+    },
+    {
+      "identity": "Compose(Genus_3_Surface, Genus_1_Surface) = Genus_4_Surface",
+      "score": 0.99,
+      "zk_proof": "b012f21564eb0f5a726902b295fa514273b1e084bc7ecf8b25ab13ee7ec4eb71",
+      "cycle": 9
+    },
+    {
+      "identity": "Compose(Genus_2_Surface, Genus_2_Surface) = Genus_4_Surface",
+      "score": 0.99,
+      "zk_proof": "7cd79d6cb326bb409d6aea37a1b66a2cc635925276d82fc3fb60e175e1baec83",
+      "cycle": 9
+    },
+    {
+      "identity": "Compose(Genus_1_Surface, Genus_3_Surface) = Genus_4_Surface",
+      "score": 0.99,
+      "zk_proof": "357422c057309f7ccf512fd2806c6db5967af4db171fd61257347956d236e199",
+      "cycle": 9
+    }
+  ]
+}

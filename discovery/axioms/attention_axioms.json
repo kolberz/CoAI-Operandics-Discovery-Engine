@@ -1,0 +1,265 @@
+{
+    "schema_version": 1,
+    "bundle": "attention",
+    "rules": [
+        {
+            "id": "linear_attention_associativity",
+            "kind": "rewrite",
+            "direction": "both",
+            "vars": {
+                "Q": "MODULE",
+                "K": "MODULE",
+                "V": "MODULE"
+            },
+            "engine": {
+                "sexpr": [
+                    "Forall",
+                    "Q",
+                    [
+                        "Forall",
+                        "K",
+                        [
+                            "Forall",
+                            "V",
+                            [
+                                "Equality",
+                                [
+                                    "Compose",
+                                    [
+                                        "phi",
+                                        "Q"
+                                    ],
+                                    [
+                                        "Compose",
+                                        [
+                                            "Transpose",
+                                            [
+                                                "phi",
+                                                "K"
+                                            ]
+                                        ],
+                                        "V"
+                                    ]
+                                ],
+                                [
+                                    "Attn",
+                                    "Q",
+                                    "K",
+                                    "V"
+                                ]
+                            ]
+                        ]
+                    ]
+                ]
+            },
+            "lean": {
+                "theorem": "StochasticAttention.attnKernel_factorize",
+                "type": null,
+                "axioms": null
+            }
+        },
+        {
+            "id": "compose_associativity",
+            "kind": "rewrite",
+            "direction": "both",
+            "vars": {
+                "A": "MODULE",
+                "B": "MODULE",
+                "C": "MODULE"
+            },
+            "engine": {
+                "sexpr": [
+                    "Forall",
+                    "A",
+                    [
+                        "Forall",
+                        "B",
+                        [
+                            "Forall",
+                            "C",
+                            [
+                                "Equality",
+                                [
+                                    "Compose",
+                                    [
+                                        "Compose",
+                                        "A",
+                                        "B"
+                                    ],
+                                    "C"
+                                ],
+                                [
+                                    "Compose",
+                                    "A",
+                                    [
+                                        "Compose",
+                                        "B",
+                                        "C"
+                                    ]
+                                ]
+                            ]
+                        ]
+                    ]
+                ]
+            },
+            "lean": {
+                "theorem": "Matrix.mul_assoc",
+                "type": null,
+                "axioms": null
+            }
+        },
+        {
+            "id": "transpose_involutive",
+            "kind": "rewrite",
+            "direction": "both",
+            "vars": {
+                "A": "MODULE"
+            },
+            "engine": {
+                "sexpr": [
+                    "Forall",
+                    "A",
+                    [
+                        "Equality",
+                        [
+                            "Transpose",
+                            [
+                                "Transpose",
+                                "A"
+                            ]
+                        ],
+                        "A"
+                    ]
+                ]
+            },
+            "lean": {
+                "theorem": "Matrix.transpose_transpose",
+                "type": null,
+                "axioms": null
+            }
+        },
+        {
+            "id": "transpose_compose",
+            "kind": "rewrite",
+            "direction": "both",
+            "vars": {
+                "A": "MODULE",
+                "B": "MODULE"
+            },
+            "engine": {
+                "sexpr": [
+                    "Forall",
+                    "A",
+                    [
+                        "Forall",
+                        "B",
+                        [
+                            "Equality",
+                            [
+                                "Transpose",
+                                [
+                                    "Compose",
+                                    "A",
+                                    "B"
+                                ]
+                            ],
+                            [
+                                "Compose",
+                                [
+                                    "Transpose",
+                                    "B"
+                                ],
+                                [
+                                    "Transpose",
+                                    "A"
+                                ]
+                            ]
+                        ]
+                    ]
+                ]
+            },
+            "lean": {
+                "theorem": "Matrix.transpose_mul",
+                "type": null,
+                "axioms": null
+            }
+        },
+        {
+            "id": "compose_id_left",
+            "kind": "rewrite",
+            "direction": "both",
+            "vars": {
+                "A": "MODULE"
+            },
+            "engine": {
+                "sexpr": [
+                    "Forall",
+                    "A",
+                    [
+                        "Equality",
+                        [
+                            "Compose",
+                            "ID_M",
+                            "A"
+                        ],
+                        "A"
+                    ]
+                ]
+            },
+            "lean": {
+                "theorem": "Matrix.one_mul",
+                "type": null,
+                "axioms": null
+            }
+        },
+        {
+            "id": "compose_id_right",
+            "kind": "rewrite",
+            "direction": "both",
+            "vars": {
+                "A": "MODULE"
+            },
+            "engine": {
+                "sexpr": [
+                    "Forall",
+                    "A",
+                    [
+                        "Equality",
+                        [
+                            "Compose",
+                            "A",
+                            "ID_M"
+                        ],
+                        "A"
+                    ]
+                ]
+            },
+            "lean": {
+                "theorem": "Matrix.mul_one",
+                "type": null,
+                "axioms": null
+            }
+        },
+        {
+            "id": "transpose_one",
+            "kind": "rewrite",
+            "direction": "both",
+            "vars": {},
+            "engine": {
+                "sexpr": [
+                    "Equality",
+                    [
+                        "Transpose",
+                        "ID_M"
+                    ],
+                    "ID_M"
+                ]
+            },
+            "lean": {
+                "theorem": "Matrix.transpose_one",
+                "type": null,
+                "axioms": null
+            }
+        }
+    ]
+}
