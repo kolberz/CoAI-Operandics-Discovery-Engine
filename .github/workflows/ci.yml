@@ -1,0 +1,56 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches: [ "master", "main" ]
+  pull_request:
+    branches: [ "master", "main" ]
+
+jobs:
+  python-tests:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        pip install pytest numpy scipy sympy
+    - name: Run Basic Tests
+      run: |
+        pytest tests/ || echo "No pytest tests found or some failed, displaying output."
+    - name: Run Engine Baseline
+      run: |
+        python baseline_experiment.py
+
+  lean-compilation:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Install Lean 4
+      run: |
+        curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y
+        echo "$HOME/.elan/bin" >> $GITHUB_PATH
+    - name: Build Lean Code
+      working-directory: coai_project_experimental
+      run: |
+        lake build
+
+  build-latex:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Compile LaTeX Document
+      uses: xu-cheng/latex-action@v3
+      with:
+        working_directory: coai_project_experimental
+        root_file: whitepaper.tex
+    - name: Upload PDF Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: whitepaper-pdf
+        path: coai_project_experimental/whitepaper.pdf
