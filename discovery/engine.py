@@ -1201,6 +1201,53 @@ class DiscoveryEngine:
             tension_budget_ratio=ratio
         )
 
+    def _discover_latent_operators(self, session, cycle, verbose=False):
+        """Scans the theorem database for frequent sub-expressions to abstract."""
+        from collections import defaultdict
+        
+        counts = defaultdict(int)
+        sizes = {}
+        
+        def extract_subexprs(t):
+            from core.logic import term_complexity
+            if hasattr(t, "symbol") and hasattr(t, "args"):
+                # Only abstract functions that are structurally larger than 1 node
+                size = term_complexity(t)
+                if size > 1:
+                    sig = str(t)
+                    counts[sig] += 1
+                    sizes[sig] = size
+                for a in t.args:
+                    extract_subexprs(a)
+
+        for thm in session.theorems:
+            form = thm.formula
+            if hasattr(form, "left"): extract_subexprs(form.left)
+            if hasattr(form, "right"): extract_subexprs(form.right)
+
+        # Evaluate candidate macros based on occurrence frequency and size
+        candidates = []
+        for sig, count in counts.items():
+            if count >= 3:
+                # Compression gain = (occurrences * size) - cost_of_making_new_def
+                gain = (count * sizes[sig]) - (sizes[sig] + 2)
+                if gain > 5:
+                    candidates.append((gain, sig))
+        
+        candidates.sort(reverse=True)
+        
+        for i, (gain, sig) in enumerate(candidates[:2]):
+            macro_op = f"LatentOp_C{cycle}_{i}"
+            if verbose:
+                print(f"  [Latent Abstraction] Promoting frequent subgraph to {macro_op}:")
+                print(f"    Definition: {macro_op} := {sig} (Gain: {gain})")
+            
+            # The actual injection into grammars/MCTS requires integrating with OmegaNode
+            # Here we simulate the effect by increasing the budget and logging it.
+            if hasattr(self, "beta_ledger"):
+                self.beta_ledger.budget += gain * 10
+            session.stats[f"latent_{macro_op}"] = sig
+            
     def discover_and_verify_conjectures(self, 
                                          cumulative: bool = True,
                                          max_cycles: int = 3,
@@ -1440,53 +1487,6 @@ class DiscoveryEngine:
             # Latent Operator Discovery
             if cycle > 0 and cycle % 3 == 0:
                 self._discover_latent_operators(session, cycle, verbose)
-            
-    def _discover_latent_operators(self, session, cycle, verbose=False):
-        """Scans the theorem database for frequent sub-expressions to abstract."""
-        from collections import defaultdict
-        
-        counts = defaultdict(int)
-        sizes = {}
-        
-        def extract_subexprs(t):
-            from core.logic import term_complexity
-            if hasattr(t, "symbol") and hasattr(t, "args"):
-                # Only abstract functions that are structurally larger than 1 node
-                size = term_complexity(t)
-                if size > 1:
-                    sig = str(t)
-                    counts[sig] += 1
-                    sizes[sig] = size
-                for a in t.args:
-                    extract_subexprs(a)
-
-        for thm in session.theorems:
-            form = thm.formula
-            if hasattr(form, "left"): extract_subexprs(form.left)
-            if hasattr(form, "right"): extract_subexprs(form.right)
-
-        # Evaluate candidate macros based on occurrence frequency and size
-        candidates = []
-        for sig, count in counts.items():
-            if count >= 3:
-                # Compression gain = (occurrences * size) - cost_of_making_new_def
-                gain = (count * sizes[sig]) - (sizes[sig] + 2)
-                if gain > 5:
-                    candidates.append((gain, sig))
-        
-        candidates.sort(reverse=True)
-        
-        for i, (gain, sig) in enumerate(candidates[:2]):
-            macro_op = f"LatentOp_C{cycle}_{i}"
-            if verbose:
-                print(f"  [Latent Abstraction] Promoting frequent subgraph to {macro_op}:")
-                print(f"    Definition: {macro_op} := {sig} (Gain: {gain})")
-            
-            # The actual injection into grammars/MCTS requires integrating with OmegaNode
-            # Here we simulate the effect by increasing the budget and logging it.
-            if hasattr(self, "beta_ledger"):
-                self.beta_ledger.budget += gain * 10
-            session.stats[f"latent_{macro_op}"] = sig
             
             cycle_time = time.time() - cycle_start
             
