@@ -8,11 +8,29 @@ Component 3 in the nine-component architecture.
 from core.logic import *
 from prover.heuristics import SemanticHeuristic
 from typing import Set, List
-from grounding.quake import (
-    simhash_sketch, sketch_distance, generate_hyperplanes, phantom_hash
-)
 import math
+import hashlib
+import random
 from typing import Dict
+
+def phantom_hash(val: int, seed1: int, seed2: int, seed3: int) -> int:
+    h_hex = hashlib.md5(f"{val}_{seed1}_{seed2}_{seed3}".encode()).hexdigest()[:8]
+    return int(h_hex, 16)
+
+def generate_hyperplanes(dim: int, bits: int, seed: int = 12345):
+    rng = random.Random(seed)
+    return [[rng.gauss(0, 1) for _ in range(dim)] for _ in range(bits)]
+
+def simhash_sketch(vec: List[float], planes: List[List[float]], bits: int) -> int:
+    sig = 0
+    for i in range(bits):
+        dot = sum(v * p for v, p in zip(vec, planes[i]))
+        if dot > 0:
+            sig |= (1 << i)
+    return sig
+
+def sketch_distance(sig1: int, sig2: int) -> int:
+    return bin(sig1 ^ sig2).count('1')
 
 
 class InterestingnessScorer:
