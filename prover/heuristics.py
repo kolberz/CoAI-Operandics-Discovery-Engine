@@ -7,7 +7,7 @@ Component 3 (partial) in the nine-component architecture.
 
 from core.logic import *
 from typing import Set
-from grounding.quake import phantom_hash
+import hashlib
 
 # Domain symbols for cross-domain detection
 RISK_SYMBOLS = {"Risk", "RiskDist", "E_Risk", "R_PENALTY", "R_INF", "R_ZERO"}
@@ -79,7 +79,8 @@ class SemanticHeuristic:
         
         # Phantom Noise: Deterministic tie-breaking
         # Hash the clause string representation to get a stable random float [-0.05, 0.05]
-        h = phantom_hash(hash(str(clause)), 0, 0, 0)
+        h_hex = hashlib.md5(str(clause).encode()).hexdigest()[:8]
+        h = int(h_hex, 16)
         noise = ((h & 0xFFFF) / 65536.0) * 0.1 - 0.05
         score += noise
         
