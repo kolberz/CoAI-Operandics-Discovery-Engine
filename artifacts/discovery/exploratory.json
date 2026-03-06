@@ -5,13 +5,1439 @@
     "mcts_iters": 256,
     "name": "exploratory"
   },
-  "report": "<engine.report failed: AttributeError(\"'NoneType' object has no attribute 'metadata'\")>",
-  "session": null,
-  "stats": null,
+  "report": "\n============================================================\n  DISCOVERY REPORT\n============================================================\nTrust base:\n  certified_mode=False\n  attention_bundle=C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\discovery\\axioms\\attention_axioms.verified.json\n  sha256[:16]=92d7b1253b95255b\n  schema_version=1\n  rules=7\n  rule_ids=['linear_attention_associativity', 'compose_associativity', 'transpose_involutive', 'transpose_compose', 'compose_id_left', 'compose_id_right', 'transpose_one']\n\n  Top applied rules: []\n\n  Statistics:\n    cycles: 3\n    clauses_total: 0\n    redundant_skipped: 0\n    nodes_explored: 0\n    theorems_proved: 0\n    new_theorems: 0\n    counter_axioms_found: 21\n    oracle_axioms_found: 0\n    total_axioms: 0\n    total_lemmas: 0\n    total_counter_axioms: 21\n    total_discoveries: 0\n    total_oracle_stipulations: 0\n\n  Top Discoveries (by interestingness):\n\n  Counter-Axioms (failed conjectures):\n    -| ~Forall M1.Risk(Seq(M1, ID_M)) = Risk(M1)\n    -| ~Forall M1.Risk(Par_Dyn(M1, ID_M)) = Risk(M1)\n    -| ~Forall M1.ResourceCost(Seq(M1, ID_M)) = ResourceCost(M1)\n    -| ~Forall M1.ResourceCost(Par_Dyn(M1, ID_M)) = ResourceCost(M1)\n    -| ~Forall M1.Comp(Seq(M1, ID_M)) = Comp(M1)\n    -| ~Forall M1.Comp(Par_Dyn(M1, ID_M)) = Comp(M1)\n    -| ~Forall M1.Ent(Seq(M1, ID_M)) = Ent(M1)\n    -| ~Forall M1.Ent(Par_Dyn(M1, ID_M)) = Ent(M1)\n    -| ~Forall M1.Forall M2.Seq(M1, M2) = Seq(M2, M1)\n    -| ~Forall M1.Forall M2.ResourceCost(Par_Dyn(M1, M2)) <= ResourceCost(Seq(M1, M2))\n    -| ~Forall M1.Forall M2.Comp(Par_Dyn(M1, M2)) <= Comp(Seq(M1, M2))\n    -| ~Forall M1.Forall M2.Forall M3.Par_Dyn(Par_Dyn(M1, M2), M3) = Par_Dyn(M1, Par_Dyn(M2, M3))\n    -| ~Forall M1.Forall M2.Risk(Par_Dyn(M1, M2)) = max(Risk(M1), Risk(M2))\n    -| ~Forall M1.Forall M2.Ent(Par_Dyn(M1, M2)) = min(Ent(M1), Ent(M2))\n    -| ~Forall M1.Forall M2.ResourceCost(Seq(M1, M2)) = ResourceCost(Seq(M2, M1))\n    -| ~Forall M1.Risk(Barrier(M1, P_TRUE)) = Risk(M1)\n    -| ~Forall M1.Barrier(M1, P_TRUE) = M1\n    -| ~Forall M1.Par_Dyn(M1, M1) = M1\n    -| ~Forall M1.Risk(Par_Dyn(M1, M1)) = Risk(M1)\n    -| ~Forall M1.Forall M2.Comp(Seq(M1, M2)) = Comp(Seq(M2, M1))\n    -| ~Forall M1.Forall M2.ResourceCost(Par_Dyn(M1, M2)) = ResourceCost(Par_Dyn(M2, M1))\n",
+  "session": {
+    "counter_axioms": [
+      {
+        "formula": {
+          "body": {
+            "left": {
+              "args": [
+                {
+                  "args": [
+                    {
+                      "name": "M1",
+                      "sort": {
+                        "name": "Module"
+                      }
+                    },
+                    {
+                      "name": "ID_M",
+                      "sort": {
+                        "name": "Module"
+                      }
+                    }
+                  ],
+                  "sort": {
+                    "name": "Module"
+                  },
+                  "symbol": "Seq"
+                }
+              ],
+              "sort": {
+                "name": "Real"
+              },
+              "symbol": "Risk"
+            },
+            "right": {
+              "args": [
+                {
+                  "name": "M1",
+                  "sort": {
+                    "name": "Module"
+                  }
+                }
+              ],
+              "sort": {
+                "name": "Real"
+              },
+              "symbol": "Risk"
+            }
+          },
+          "variable": {
+            "name": "M1",
+            "sort": {
+              "name": "Module"
+            }
+          }
+        }
+      },
+      {
+        "formula": {
+          "body": {
+            "left": {
+              "args": [
+                {
+                  "args": [
+                    {
+                      "name": "M1",
+                      "sort": {
+                        "name": "Module"
+                      }
+                    },
+                    {
+                      "name": "ID_M",
+                      "sort": {
+                        "name": "Module"
+                      }
+                    }
+                  ],
+                  "sort": {
+                    "name": "Module"
+                  },
+                  "symbol": "Par_Dyn"
+                }
+              ],
+              "sort": {
+                "name": "Real"
+              },
+              "symbol": "Risk"
+            },
+            "right": {
+              "args": [
+                {
+                  "name": "M1",
+                  "sort": {
+                    "name": "Module"
+                  }
+                }
+              ],
+              "sort": {
+                "name": "Real"
+              },
+              "symbol": "Risk"
+            }
+          },
+          "variable": {
+            "name": "M1",
+            "sort": {
+              "name": "Module"
+            }
+          }
+        }
+      },
+      {
+        "formula": {
+          "body": {
+            "left": {
+              "args": [
+                {
+                  "args": [
+                    {
+                      "name": "M1",
+                      "sort": {
+                        "name": "Module"
+                      }
+                    },
+                    {
+                      "name": "ID_M",
+                      "sort": {
+                        "name": "Module"
+                      }
+                    }
+                  ],
+                  "sort": {
+                    "name": "Module"
+                  },
+                  "symbol": "Seq"
+                }
+              ],
+              "sort": {
+                "name": "Real"
+              },
+              "symbol": "ResourceCost"
+            },
+            "right": {
+              "args": [
+                {
+                  "name": "M1",
+                  "sort": {
+                    "name": "Module"
+                  }
+                }
+              ],
+              "sort": {
+                "name": "Real"
+              },
+              "symbol": "ResourceCost"
+            }
+          },
+          "variable": {
+            "name": "M1",
+            "sort": {
+              "name": "Module"
+            }
+          }
+        }
+      },
+      {
+        "formula": {
+          "body": {
+            "left": {
+              "args": [
+                {
+                  "args": [
+                    {
+                      "name": "M1",
+                      "sort": {
+                        "name": "Module"
+                      }
+                    },
+                    {
+                      "name": "ID_M",
+                      "sort": {
+                        "name": "Module"
+                      }
+                    }
+                  ],
+                  "sort": {
+                    "name": "Module"
+                  },
+                  "symbol": "Par_Dyn"
+                }
+              ],
+              "sort": {
+                "name": "Real"
+              },
+              "symbol": "ResourceCost"
+            },
+            "right": {
+              "args": [
+                {
+                  "name": "M1",
+                  "sort": {
+                    "name": "Module"
+                  }
+                }
+              ],
+              "sort": {
+                "name": "Real"
+              },
+              "symbol": "ResourceCost"
+            }
+          },
+          "variable": {
+            "name": "M1",
+            "sort": {
+              "name": "Module"
+            }
+          }
+        }
+      },
+      {
+        "formula": {
+          "body": {
+            "left": {
+              "args": [
+                {
+                  "args": [
+                    {
+                      "name": "M1",
+                      "sort": {
+                        "name": "Module"
+                      }
+                    },
+                    {
+                      "name": "ID_M",
+                      "sort": {
+                        "name": "Module"
+                      }
+                    }
+                  ],
+                  "sort": {
+                    "name": "Module"
+                  },
+                  "symbol": "Seq"
+                }
+              ],
+              "sort": {
+                "name": "Real"
+              },
+              "symbol": "Comp"
+            },
+            "right": {
+              "args": [
+                {
+                  "name": "M1",
+                  "sort": {
+                    "name": "Module"
+                  }
+                }
+              ],
+              "sort": {
+                "name": "Real"
+              },
+              "symbol": "Comp"
+            }
+          },
+          "variable": {
+            "name": "M1",
+            "sort": {
+              "name": "Module"
+            }
+          }
+        }
+      },
+      {
+        "formula": {
+          "body": {
+            "left": {
+              "args": [
+                {
+                  "args": [
+                    {
+                      "name": "M1",
+                      "sort": {
+                        "name": "Module"
+                      }
+                    },
+                    {
+                      "name": "ID_M",
+                      "sort": {
+                        "name": "Module"
+                      }
+                    }
+                  ],
+                  "sort": {
+                    "name": "Module"
+                  },
+                  "symbol": "Par_Dyn"
+                }
+              ],
+              "sort": {
+                "name": "Real"
+              },
+              "symbol": "Comp"
+            },
+            "right": {
+              "args": [
+                {
+                  "name": "M1",
+                  "sort": {
+                    "name": "Module"
+                  }
+                }
+              ],
+              "sort": {
+                "name": "Real"
+              },
+              "symbol": "Comp"
+            }
+          },
+          "variable": {
+            "name": "M1",
+            "sort": {
+              "name": "Module"
+            }
+          }
+        }
+      },
+      {
+        "formula": {
+          "body": {
+            "left": {
+              "args": [
+                {
+                  "args": [
+                    {
+                      "name": "M1",
+                      "sort": {
+                        "name": "Module"
+                      }
+                    },
+                    {
+                      "name": "ID_M",
+                      "sort": {
+                        "name": "Module"
+                      }
+                    }
+                  ],
+                  "sort": {
+                    "name": "Module"
+                  },
+                  "symbol": "Seq"
+                }
+              ],
+              "sort": {
+                "name": "Real"
+              },
+              "symbol": "Ent"
+            },
+            "right": {
+              "args": [
+                {
+                  "name": "M1",
+                  "sort": {
+                    "name": "Module"
+                  }
+                }
+              ],
+              "sort": {
+                "name": "Real"
+              },
+              "symbol": "Ent"
+            }
+          },
+          "variable": {
+            "name": "M1",
+            "sort": {
+              "name": "Module"
+            }
+          }
+        }
+      },
+      {
+        "formula": {
+          "body": {
+            "left": {
+              "args": [
+                {
+                  "args": [
+                    {
+                      "name": "M1",
+                      "sort": {
+                        "name": "Module"
+                      }
+                    },
+                    {
+                      "name": "ID_M",
+                      "sort": {
+                        "name": "Module"
+                      }
+                    }
+                  ],
+                  "sort": {
+                    "name": "Module"
+                  },
+                  "symbol": "Par_Dyn"
+                }
+              ],
+              "sort": {
+                "name": "Real"
+              },
+              "symbol": "Ent"
+            },
+            "right": {
+              "args": [
+                {
+                  "name": "M1",
+                  "sort": {
+                    "name": "Module"
+                  }
+                }
+              ],
+              "sort": {
+                "name": "Real"
+              },
+              "symbol": "Ent"
+            }
+          },
+          "variable": {
+            "name": "M1",
+            "sort": {
+              "name": "Module"
+            }
+          }
+        }
+      },
+      {
+        "formula": {
+          "body": {
+            "body": {
+              "left": {
+                "args": [
+                  {
+                    "name": "M1",
+                    "sort": {
+                      "name": "Module"
+                    }
+                  },
+                  {
+                    "name": "M2",
+                    "sort": {
+                      "name": "Module"
+                    }
+                  }
+                ],
+                "sort": {
+                  "name": "Module"
+                },
+                "symbol": "Seq"
+              },
+              "right": {
+                "args": [
+                  {
+                    "name": "M2",
+                    "sort": {
+                      "name": "Module"
+                    }
+                  },
+                  {
+                    "name": "M1",
+                    "sort": {
+                      "name": "Module"
+                    }
+                  }
+                ],
+                "sort": {
+                  "name": "Module"
+                },
+                "symbol": "Seq"
+              }
+            },
+            "variable": {
+              "name": "M2",
+              "sort": {
+                "name": "Module"
+              }
+            }
+          },
+          "variable": {
+            "name": "M1",
+            "sort": {
+              "name": "Module"
+            }
+          }
+        }
+      },
+      {
+        "formula": {
+          "body": {
+            "body": {
+              "left": {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "name": "M1",
+                        "sort": {
+                          "name": "Module"
+                        }
+                      },
+                      {
+                        "name": "M2",
+                        "sort": {
+                          "name": "Module"
+                        }
+                      }
+                    ],
+                    "sort": {
+                      "name": "Module"
+                    },
+                    "symbol": "Par_Dyn"
+                  }
+                ],
+                "sort": {
+                  "name": "Real"
+                },
+                "symbol": "ResourceCost"
+              },
+              "right": {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "name": "M1",
+                        "sort": {
+                          "name": "Module"
+                        }
+                      },
+                      {
+                        "name": "M2",
+                        "sort": {
+                          "name": "Module"
+                        }
+                      }
+                    ],
+                    "sort": {
+                      "name": "Module"
+                    },
+                    "symbol": "Seq"
+                  }
+                ],
+                "sort": {
+                  "name": "Real"
+                },
+                "symbol": "ResourceCost"
+              }
+            },
+            "variable": {
+              "name": "M2",
+              "sort": {
+                "name": "Module"
+              }
+            }
+          },
+          "variable": {
+            "name": "M1",
+            "sort": {
+              "name": "Module"
+            }
+          }
+        }
+      },
+      {
+        "formula": {
+          "body": {
+            "body": {
+              "left": {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "name": "M1",
+                        "sort": {
+                          "name": "Module"
+                        }
+                      },
+                      {
+                        "name": "M2",
+                        "sort": {
+                          "name": "Module"
+                        }
+                      }
+                    ],
+                    "sort": {
+                      "name": "Module"
+                    },
+                    "symbol": "Par_Dyn"
+                  }
+                ],
+                "sort": {
+                  "name": "Real"
+                },
+                "symbol": "Comp"
+              },
+              "right": {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "name": "M1",
+                        "sort": {
+                          "name": "Module"
+                        }
+                      },
+                      {
+                        "name": "M2",
+                        "sort": {
+                          "name": "Module"
+                        }
+                      }
+                    ],
+                    "sort": {
+                      "name": "Module"
+                    },
+                    "symbol": "Seq"
+                  }
+                ],
+                "sort": {
+                  "name": "Real"
+                },
+                "symbol": "Comp"
+              }
+            },
+            "variable": {
+              "name": "M2",
+              "sort": {
+                "name": "Module"
+              }
+            }
+          },
+          "variable": {
+            "name": "M1",
+            "sort": {
+              "name": "Module"
+            }
+          }
+        }
+      },
+      {
+        "formula": {
+          "body": {
+            "body": {
+              "body": {
+                "left": {
+                  "args": [
+                    {
+                      "args": [
+                        {
+                          "name": "M1",
+                          "sort": {
+                            "name": "Module"
+                          }
+                        },
+                        {
+                          "name": "M2",
+                          "sort": {
+                            "name": "Module"
+                          }
+                        }
+                      ],
+                      "sort": {
+                        "name": "Module"
+                      },
+                      "symbol": "Par_Dyn"
+                    },
+                    {
+                      "name": "M3",
+                      "sort": {
+                        "name": "Module"
+                      }
+                    }
+                  ],
+                  "sort": {
+                    "name": "Module"
+                  },
+                  "symbol": "Par_Dyn"
+                },
+                "right": {
+                  "args": [
+                    {
+                      "name": "M1",
+                      "sort": {
+                        "name": "Module"
+                      }
+                    },
+                    {
+                      "args": [
+                        {
+                          "name": "M2",
+                          "sort": {
+                            "name": "Module"
+                          }
+                        },
+                        {
+                          "name": "M3",
+                          "sort": {
+                            "name": "Module"
+                          }
+                        }
+                      ],
+                      "sort": {
+                        "name": "Module"
+                      },
+                      "symbol": "Par_Dyn"
+                    }
+                  ],
+                  "sort": {
+                    "name": "Module"
+                  },
+                  "symbol": "Par_Dyn"
+                }
+              },
+              "variable": {
+                "name": "M3",
+                "sort": {
+                  "name": "Module"
+                }
+              }
+            },
+            "variable": {
+              "name": "M2",
+              "sort": {
+                "name": "Module"
+              }
+            }
+          },
+          "variable": {
+            "name": "M1",
+            "sort": {
+              "name": "Module"
+            }
+          }
+        }
+      },
+      {
+        "formula": {
+          "body": {
+            "body": {
+              "left": {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "name": "M1",
+                        "sort": {
+                          "name": "Module"
+                        }
+                      },
+                      {
+                        "name": "M2",
+                        "sort": {
+                          "name": "Module"
+                        }
+                      }
+                    ],
+                    "sort": {
+                      "name": "Module"
+                    },
+                    "symbol": "Par_Dyn"
+                  }
+                ],
+                "sort": {
+                  "name": "Real"
+                },
+                "symbol": "Risk"
+              },
+              "right": {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "name": "M1",
+                        "sort": {
+                          "name": "Module"
+                        }
+                      }
+                    ],
+                    "sort": {
+                      "name": "Real"
+                    },
+                    "symbol": "Risk"
+                  },
+                  {
+                    "args": [
+                      {
+                        "name": "M2",
+                        "sort": {
+                          "name": "Module"
+                        }
+                      }
+                    ],
+                    "sort": {
+                      "name": "Real"
+                    },
+                    "symbol": "Risk"
+                  }
+                ],
+                "sort": {
+                  "name": "Real"
+                },
+                "symbol": "max"
+              }
+            },
+            "variable": {
+              "name": "M2",
+              "sort": {
+                "name": "Module"
+              }
+            }
+          },
+          "variable": {
+            "name": "M1",
+            "sort": {
+              "name": "Module"
+            }
+          }
+        }
+      },
+      {
+        "formula": {
+          "body": {
+            "body": {
+              "left": {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "name": "M1",
+                        "sort": {
+                          "name": "Module"
+                        }
+                      },
+                      {
+                        "name": "M2",
+                        "sort": {
+                          "name": "Module"
+                        }
+                      }
+                    ],
+                    "sort": {
+                      "name": "Module"
+                    },
+                    "symbol": "Par_Dyn"
+                  }
+                ],
+                "sort": {
+                  "name": "Real"
+                },
+                "symbol": "Ent"
+              },
+              "right": {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "name": "M1",
+                        "sort": {
+                          "name": "Module"
+                        }
+                      }
+                    ],
+                    "sort": {
+                      "name": "Real"
+                    },
+                    "symbol": "Ent"
+                  },
+                  {
+                    "args": [
+                      {
+                        "name": "M2",
+                        "sort": {
+                          "name": "Module"
+                        }
+                      }
+                    ],
+                    "sort": {
+                      "name": "Real"
+                    },
+                    "symbol": "Ent"
+                  }
+                ],
+                "sort": {
+                  "name": "Real"
+                },
+                "symbol": "min"
+              }
+            },
+            "variable": {
+              "name": "M2",
+              "sort": {
+                "name": "Module"
+              }
+            }
+          },
+          "variable": {
+            "name": "M1",
+            "sort": {
+              "name": "Module"
+            }
+          }
+        }
+      },
+      {
+        "formula": {
+          "body": {
+            "body": {
+              "left": {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "name": "M1",
+                        "sort": {
+                          "name": "Module"
+                        }
+                      },
+                      {
+                        "name": "M2",
+                        "sort": {
+                          "name": "Module"
+                        }
+                      }
+                    ],
+                    "sort": {
+                      "name": "Module"
+                    },
+                    "symbol": "Seq"
+                  }
+                ],
+                "sort": {
+                  "name": "Real"
+                },
+                "symbol": "ResourceCost"
+              },
+              "right": {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "name": "M2",
+                        "sort": {
+                          "name": "Module"
+                        }
+                      },
+                      {
+                        "name": "M1",
+                        "sort": {
+                          "name": "Module"
+                        }
+                      }
+                    ],
+                    "sort": {
+                      "name": "Module"
+                    },
+                    "symbol": "Seq"
+                  }
+                ],
+                "sort": {
+                  "name": "Real"
+                },
+                "symbol": "ResourceCost"
+              }
+            },
+            "variable": {
+              "name": "M2",
+              "sort": {
+                "name": "Module"
+              }
+            }
+          },
+          "variable": {
+            "name": "M1",
+            "sort": {
+              "name": "Module"
+            }
+          }
+        }
+      },
+      {
+        "formula": {
+          "body": {
+            "left": {
+              "args": [
+                {
+                  "args": [
+                    {
+                      "name": "M1",
+                      "sort": {
+                        "name": "Module"
+                      }
+                    },
+                    {
+                      "name": "P_TRUE",
+                      "sort": {
+                        "name": "Predicate"
+                      }
+                    }
+                  ],
+                  "sort": {
+                    "name": "Module"
+                  },
+                  "symbol": "Barrier"
+                }
+              ],
+              "sort": {
+                "name": "Real"
+              },
+              "symbol": "Risk"
+            },
+            "right": {
+              "args": [
+                {
+                  "name": "M1",
+                  "sort": {
+                    "name": "Module"
+                  }
+                }
+              ],
+              "sort": {
+                "name": "Real"
+              },
+              "symbol": "Risk"
+            }
+          },
+          "variable": {
+            "name": "M1",
+            "sort": {
+              "name": "Module"
+            }
+          }
+        }
+      },
+      {
+        "formula": {
+          "body": {
+            "left": {
+              "args": [
+                {
+                  "name": "M1",
+                  "sort": {
+                    "name": "Module"
+                  }
+                },
+                {
+                  "name": "P_TRUE",
+                  "sort": {
+                    "name": "Predicate"
+                  }
+                }
+              ],
+              "sort": {
+                "name": "Module"
+              },
+              "symbol": "Barrier"
+            },
+            "right": {
+              "name": "M1",
+              "sort": {
+                "name": "Module"
+              }
+            }
+          },
+          "variable": {
+            "name": "M1",
+            "sort": {
+              "name": "Module"
+            }
+          }
+        }
+      },
+      {
+        "formula": {
+          "body": {
+            "left": {
+              "args": [
+                {
+                  "name": "M1",
+                  "sort": {
+                    "name": "Module"
+                  }
+                },
+                {
+                  "name": "M1",
+                  "sort": {
+                    "name": "Module"
+                  }
+                }
+              ],
+              "sort": {
+                "name": "Module"
+              },
+              "symbol": "Par_Dyn"
+            },
+            "right": {
+              "name": "M1",
+              "sort": {
+                "name": "Module"
+              }
+            }
+          },
+          "variable": {
+            "name": "M1",
+            "sort": {
+              "name": "Module"
+            }
+          }
+        }
+      },
+      {
+        "formula": {
+          "body": {
+            "left": {
+              "args": [
+                {
+                  "args": [
+                    {
+                      "name": "M1",
+                      "sort": {
+                        "name": "Module"
+                      }
+                    },
+                    {
+                      "name": "M1",
+                      "sort": {
+                        "name": "Module"
+                      }
+                    }
+                  ],
+                  "sort": {
+                    "name": "Module"
+                  },
+                  "symbol": "Par_Dyn"
+                }
+              ],
+              "sort": {
+                "name": "Real"
+              },
+              "symbol": "Risk"
+            },
+            "right": {
+              "args": [
+                {
+                  "name": "M1",
+                  "sort": {
+                    "name": "Module"
+                  }
+                }
+              ],
+              "sort": {
+                "name": "Real"
+              },
+              "symbol": "Risk"
+            }
+          },
+          "variable": {
+            "name": "M1",
+            "sort": {
+              "name": "Module"
+            }
+          }
+        }
+      },
+      {
+        "formula": {
+          "body": {
+            "body": {
+              "left": {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "name": "M1",
+                        "sort": {
+                          "name": "Module"
+                        }
+                      },
+                      {
+                        "name": "M2",
+                        "sort": {
+                          "name": "Module"
+                        }
+                      }
+                    ],
+                    "sort": {
+                      "name": "Module"
+                    },
+                    "symbol": "Seq"
+                  }
+                ],
+                "sort": {
+                  "name": "Real"
+                },
+                "symbol": "Comp"
+              },
+              "right": {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "name": "M2",
+                        "sort": {
+                          "name": "Module"
+                        }
+                      },
+                      {
+                        "name": "M1",
+                        "sort": {
+                          "name": "Module"
+                        }
+                      }
+                    ],
+                    "sort": {
+                      "name": "Module"
+                    },
+                    "symbol": "Seq"
+                  }
+                ],
+                "sort": {
+                  "name": "Real"
+                },
+                "symbol": "Comp"
+              }
+            },
+            "variable": {
+              "name": "M2",
+              "sort": {
+                "name": "Module"
+              }
+            }
+          },
+          "variable": {
+            "name": "M1",
+            "sort": {
+              "name": "Module"
+            }
+          }
+        }
+      },
+      {
+        "formula": {
+          "body": {
+            "body": {
+              "left": {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "name": "M1",
+                        "sort": {
+                          "name": "Module"
+                        }
+                      },
+                      {
+                        "name": "M2",
+                        "sort": {
+                          "name": "Module"
+                        }
+                      }
+                    ],
+                    "sort": {
+                      "name": "Module"
+                    },
+                    "symbol": "Par_Dyn"
+                  }
+                ],
+                "sort": {
+                  "name": "Real"
+                },
+                "symbol": "ResourceCost"
+              },
+              "right": {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "name": "M2",
+                        "sort": {
+                          "name": "Module"
+                        }
+                      },
+                      {
+                        "name": "M1",
+                        "sort": {
+                          "name": "Module"
+                        }
+                      }
+                    ],
+                    "sort": {
+                      "name": "Module"
+                    },
+                    "symbol": "Par_Dyn"
+                  }
+                ],
+                "sort": {
+                  "name": "Real"
+                },
+                "symbol": "ResourceCost"
+              }
+            },
+            "variable": {
+              "name": "M2",
+              "sort": {
+                "name": "Module"
+              }
+            }
+          },
+          "variable": {
+            "name": "M1",
+            "sort": {
+              "name": "Module"
+            }
+          }
+        }
+      }
+    ],
+    "cycle": 2,
+    "mcts_asts": [],
+    "metadata": {
+      "applied_rules_counter": {},
+      "attention_bundle_loaded": true,
+      "attention_bundle_path": "C:\\Users\\admin\\OneDrive\\Desktop\\CoAI Operandics Discovery Engine\\discovery\\axioms\\attention_axioms.verified.json",
+      "attention_bundle_rule_ids": [
+        "linear_attention_associativity",
+        "compose_associativity",
+        "transpose_involutive",
+        "transpose_compose",
+        "compose_id_left",
+        "compose_id_right",
+        "transpose_one"
+      ],
+      "attention_bundle_schema_version": 1,
+      "attention_bundle_sha256_16": "92d7b1253b95255b",
+      "certified_mode": false,
+      "corridor_outcomes": [
+        {
+          "authorized": true,
+          "cycle": 0,
+          "min_margin": 0.0035733251633987087,
+          "recovered": true,
+          "regime": "CORRIDOR",
+          "risk": 0.0,
+          "state": {
+            "attention_coherence": 0.15482398897058824,
+            "centroid_similarity": 0.5,
+            "embedding_norm": 0.0,
+            "entropy": 0.8325000000000001,
+            "manifold_divergence": 1.0
+          },
+          "tightest_gate": "beta",
+          "violated_gates": []
+        },
+        {
+          "authorized": true,
+          "cycle": 1,
+          "min_margin": 0.0035733251633987087,
+          "recovered": true,
+          "regime": "CORRIDOR",
+          "risk": 0.0,
+          "state": {
+            "attention_coherence": 0.15482398897058824,
+            "centroid_similarity": 0.5,
+            "embedding_norm": 0.0,
+            "entropy": 0.8325000000000001,
+            "manifold_divergence": 1.0
+          },
+          "tightest_gate": "beta",
+          "violated_gates": []
+        },
+        {
+          "authorized": true,
+          "cycle": 2,
+          "min_margin": 0.0035733251633987087,
+          "recovered": true,
+          "regime": "CORRIDOR",
+          "risk": 0.0,
+          "state": {
+            "attention_coherence": 0.15482398897058824,
+            "centroid_similarity": 0.5,
+            "embedding_norm": 0.0,
+            "entropy": 0.8325000000000001,
+            "manifold_divergence": 1.0
+          },
+          "tightest_gate": "beta",
+          "violated_gates": []
+        }
+      ]
+    },
+    "oracle_axioms": [],
+    "stats": {
+      "clauses_total": 0,
+      "counter_axioms_found": 21,
+      "cycles": 3,
+      "new_theorems": 0,
+      "nodes_explored": 0,
+      "oracle_axioms_found": 0,
+      "redundant_skipped": 0,
+      "theorems_proved": 0,
+      "total_axioms": 0,
+      "total_counter_axioms": 21,
+      "total_discoveries": 0,
+      "total_lemmas": 0,
+      "total_oracle_stipulations": 0
+    },
+    "theorems": []
+  },
+  "stats": {
+    "clauses_total": 0,
+    "counter_axioms_found": 21,
+    "cycles": 3,
+    "new_theorems": 0,
+    "nodes_explored": 0,
+    "oracle_axioms_found": 0,
+    "redundant_skipped": 0,
+    "theorems_proved": 0,
+    "total_axioms": 0,
+    "total_counter_axioms": 21,
+    "total_discoveries": 0,
+    "total_lemmas": 0,
+    "total_oracle_stipulations": 0
+  },
   "summary": {
     "discovery_count": null,
     "discovery_field": null,
-    "elapsed_s": 10.054,
-    "redundant_skipped": null
+    "elapsed_s": 6.316,
+    "redundant_skipped": 0
   }
 }
