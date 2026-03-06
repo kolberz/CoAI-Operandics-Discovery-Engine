@@ -1,0 +1,17 @@
+{
+  "discoveries": null,
+  "profile": {
+    "max_cycles": 10,
+    "mcts_iters": 128,
+    "name": "baseline"
+  },
+  "report": "<engine.report failed: AttributeError(\"'NoneType' object has no attribute 'metadata'\")>",
+  "session": null,
+  "stats": null,
+  "summary": {
+    "discovery_count": null,
+    "discovery_field": null,
+    "elapsed_s": 9.194,
+    "redundant_skipped": null
+  }
+}
